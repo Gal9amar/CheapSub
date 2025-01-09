@@ -2370,3 +2370,7 @@ section,
   font-weight: 500;
   border-radius: 50px;
 }
+.ytbtnorder{
+  display: flex;
+  justify-content: center;
+}
