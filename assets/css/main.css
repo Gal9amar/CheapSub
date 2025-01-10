@@ -574,7 +574,7 @@ h6 {
   right: 15px;
   bottom: -15px;
   z-index: 99999;
-  background-color: var(--accent-color);
+  /* background-color: var(--accent-color); */
   width: 44px;
   height: 44px;
   border-radius: 50px;
@@ -588,7 +588,7 @@ h6 {
 }
 
 .scroll-top:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  /* background-color: color-mix(in srgb, var(--accent-color), transparent 20%); */
   color: var(--contrast-color);
 }
 
