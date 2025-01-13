@@ -2482,9 +2482,9 @@ section,
 }
 
 .price-item .price-top h2 sup {
-  top: 13px;
+  top: 20px;
   left: -5px;
-  font-size: 0.35em;
+  font-size: 1em;
   font-weight: 500;
   vertical-align: top;
 }
@@ -2506,6 +2506,7 @@ section,
   .price-item .price-content li {
     padding-left: 28px;
     text-align: left;
+    
   }
 }
 
@@ -2514,6 +2515,7 @@ section,
     position: absolute;
     left: 0;
     top: 3px;
+  
   }
 }
 
@@ -2555,4 +2557,7 @@ section,
 
 .liright {
   text-align: right !important;
+}
+.marg{
+  margin: 20px;
 }

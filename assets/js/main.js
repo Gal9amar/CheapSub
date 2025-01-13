@@ -165,7 +165,7 @@
 const AUTH_KEY = "isAuthorized"; // מפתח לאחסון במקומי
 const BUTTON_KEY = "guideButtonHidden"; // מפתח לשמירת מצב הכפתור
 const COLLAPSE_KEY = "collapseState"; // מפתח לשמירת מצב התוכן המוסתר
-const AUTH_TIMEOUT = 20 * 60 * 1000; // 20 דקות במילישניות
+const AUTH_TIMEOUT = 5 * 60 * 1000; // 20 דקות במילישניות
 
 // פונקציה לבדוק אם המשתמש מורשה
 function isUserAuthorized() {
