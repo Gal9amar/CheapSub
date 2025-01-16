@@ -2482,8 +2482,8 @@ section,
 }
 
 .price-item .price-top h2 sup {
-  top: 20px;
-  left: -5px;
+  top: 15px;
+  /* left: -5px; */
   font-size: 1em;
   font-weight: 500;
   vertical-align: top;
@@ -2596,7 +2596,10 @@ section,
     justify-content: space-around; /* שומר על ריווח בין הפריטים */
   }
 }
-
+.month{
+  font-size: 15px;
+  font-weight: 100;
+}
 
 
 .stat-content h4 {
