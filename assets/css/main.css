@@ -12,6 +12,7 @@
   --heading-color: #2d465e; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #0d83fd; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --spotify-color: #25d865;
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
@@ -778,6 +779,18 @@ section,
   border-radius: 50px;
   font-weight: 500;
   transition: all 0.3s ease;
+}
+
+.btn-spotify {
+  background-color: var(--spotify-color);
+  border-color:var(--spotify-color);
+  color: var(--contrast-color);
+  /* padding: 0.75rem 2.5rem; */
+  border-radius: 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  width: 200px;
+  height: 40px;
 }
 
 .hero .btn-primary:hover {
@@ -2436,8 +2449,9 @@ section,
 .price-item .price-top {
   -webkit-box-shadow: 0 5px 30px 0 rgba(39, 39, 39, 0.15);
   box-shadow: 0 5px 30px 0 rgba(39, 39, 39, 0.15);
-  padding: 50px 0 25px;
-  background-color: var(--accent-color);
+  padding: 30px 0 25px;
+  background: linear-gradient(135deg, rgba(22, 255, 1, 0.8), rgba(17, 71, 0, 0.8));
+
   border-radius: 10px;
   position: relative;
   z-index: 0;
@@ -2455,7 +2469,7 @@ section,
   height: 50px;
   width: 100%;
   border-radius: 0 0 10px 10px;
-  background-color: var(--accent-color);
+  background: linear-gradient(150deg, rgba(22, 255, 1, 1), rgba(17, 71, 0, 1));
   position: absolute;
   content: "";
   left: 0;
@@ -2596,11 +2610,10 @@ section,
     justify-content: space-around; /* שומר על ריווח בין הפריטים */
   }
 }
-.month{
+.month {
   font-size: 15px;
   font-weight: 100;
 }
-
 
 .stat-content h4 {
   white-space: nowrap; /* מונע שבירת טקסט */
@@ -2660,4 +2673,35 @@ section,
 [data-aos="fade-up"].aos-animate {
   opacity: 1;
   transform: translateY(0);
+}
+.price-container {
+  background: linear-gradient(135deg, rgba(22, 255, 1, 0.7), rgba(17, 71, 0, 0.7)), url("/assets/img/spotify.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.price-container div {
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.price-container .highlight {
+  font-size: 26px;
+  font-weight: bold;
+
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.price-container .new-price {
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffeb3b;
 }
