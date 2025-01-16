@@ -654,7 +654,7 @@ section,
 .section {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 60px 0;
+  padding: 40px 0;
   scroll-margin-top: 90px;
   overflow: clip;
 }
@@ -671,7 +671,7 @@ section,
 --------------------------------------------------------------*/
 .section-title {
   text-align: center;
-  padding-bottom: 60px;
+  padding-bottom: 15px;
   position: relative;
 }
 
@@ -1413,7 +1413,7 @@ section,
   position: relative;
   overflow: hidden;
   border-radius: 1rem;
-  padding: 4rem 2rem;
+  padding: 2rem 1rem;
 }
 
 .call-to-action .content h2,
