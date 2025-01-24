@@ -1986,7 +1986,7 @@ section,
 .faq .faq-container .faq-item .faq-toggle {
   position: absolute;
   top: 20px;
-  right: 20px;
+  left: 20px;
   font-size: 16px;
   line-height: 0;
   transition: 0.3s;
