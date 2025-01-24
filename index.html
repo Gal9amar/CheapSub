@@ -45,8 +45,8 @@
           <li><a href="#features">Spotify</a></li>
           <li><a href="#playstation">Playstation</a></li>
           <li><a href="#Google">Google</a></li>
-          <li><a href="#Netflix">Netflix</a></li>
           <li><a href="#YouTube">YouTube</a></li>
+          <li><a href="#Netflix">Netflix</a></li>
           <li><a href="#faq">שאלות ותשובות</a></li>
 
         </ul>
@@ -494,13 +494,7 @@
         <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
         <script type="text/javascript"></script>
-
-
-
-
     </section><!-- /Spotify Section end -->
-
-
     <section id="playstation" class="call-to-action container">
       <div class="container" style="border-radius: 15px;" data-aos="fade-up" data-aos-delay="100">
         <div class="row content justify-content-center align-items-center position-relative">
@@ -623,7 +617,8 @@
               <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
                 <h3>מסלול גיבוי בסיסי בנפח 100GB</h3>
                 <p class="fst-italic">
-                  מסלול גיבוי מצויין לשירותים כמו וואטסאפ במכשיר הנייד ,גיבוי מסמכים עלות המסלול לשנה שלמה 40₪
+                  מסלול גיבוי מצויין לשירותים כמו וואטסאפ במכשיר הנייד ,גיבוי מסמכים עלות המסלול לשנה שלמה 10₪
+                  <br>בתוספת עלות הקמה של 50₪ חד"פ
                 </p>
                 <ul>
                   <li><i class="bi bi-check2-all"></i> <span>גיבוי בנפח של 100GB</span></li>
@@ -631,7 +626,7 @@
                   <li><i class="bi bi-check2-all"></i> <span>גיבוי לגלריית התמונות</span></li>
                 </ul>
                 <a href="https://wa.me/+972529070000"><button style="border-radius: 20px ;width: 200px;" class="btn btn-primary btndown">
-                    רכוש עכשיו
+                    הזמן
                   </button></a>
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center">
@@ -646,7 +641,8 @@
                 <h3>מסלול גיבוי פרימיום בנפח של 2TB</h3>
                 <p class="fst-italic">
                   מסלול גיבוי מצויין לשירותים כמו וואטסאפ במכשיר הנייד ,גיבוי מסמכים, סרטונים ועוד..
-                  <br> עלות המסלול לשנה שלמה 130₪
+                  <br> עלות המסלול לשנה שלמה 80₪
+                  <br>בתוספת עלות הקמה של 50₪ חד"פ
                 </p>
                 <ul>
                   <li><i class="bi bi-check2-all"></i> <span>גיבוי בנפח של 2TB</span></li>
@@ -655,19 +651,27 @@
                   <li><i class="bi bi-check2-all"></i> <span>גיבוי סרטונים</span></li>
                 </ul>
                 <a href="https://wa.me/+972529070000"><button style="border-radius: 20px ;width: 200px;" class="btn btn-primary btndown">
-                    רכוש עכשיו
+                    הזמן
                   </button></a>
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center">
                 <img src="assets/img/‏‏2t.jpg" alt="תמונה של גיבוי 2TB" class="img-fluid googlepic" style="border-radius: 10px; transition: transform 0.3s ease;">
               </div>
             </div>
-          </div><!-- End tab content item -->
+          </div>
+          <br><!-- End tab content item -->
+          <div class="googleguidediv">
+            <button onclick="promptPassword('dynamic-content-1','google-guide.html')" class="btn btn-primary btn-googleguide">
+              מדריך (בקרוב)
+            </button>
+          </div>
         </div>
       </div>
+      <!-- תוכן דינמי ייכנס כאן -->
+      <!-- אזור שבו התוכן ייטען -->
+      <main id="dynamic-content-1" class="content-area">
+      </main>
     </section><!-- /Google Section -->
-
-
     <section id="YouTube" class="call-to-action container">
       <!-- /youtube premium -->
       <div style="background-color: rgba(0, 0, 0, 0.795); border-radius: 15px;" class="container" data-aos="fade-up" data-aos-delay="100">
@@ -904,133 +908,14 @@
       <div><br>
         <p>
         <div class="d-flex justify-content-center">
-          <!-- כפתור לפתיחת מודאל -->
-          <button id="guide" class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#passwordModal">
-            מדריך הקמה עצמית
-          </button>
-
-          <!-- מודאל להזנת סיסמה -->
-          <div class="modal fade" id="passwordModal" tabindex="-1" aria-labelledby="passwordModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="passwordModalLabel">כדי לצפות במדריך החינמי יש לבקש סיסמה ע"י שליחת הודעה, לחץ על הלחצן הירוק בראש העמוד "שלח הודעה"</h5>
-                  <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
-                </div>
-                <div class="modal-body">
-                  <input type="password" id="passwordInput" class="form-control" placeholder="סיסמה" />
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">סגור</button>
-                  <button type="button" class="btn btn-primary" id="submitPassword">אישור</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- טיימר להציג את הזמן שנותר -->
-          <div id="timerContainer" style="display: none;">
-            <span id="timerDisplay"></span>
-          </div>
-          <!-- תוכן נסתר -->
-        </div>
-
-        </p>
-        <div class="collapse" id="collapseExample">
-          <div class="card card-body">
-            <div class="card container section-title">
-              <div class="card-body">
-                <h5 class="card-title">מדריך הקמה עצמית</h5>
-                <p class="card-text">1. מפעילים VPN למדינת ניגריה אני משתמש ב- IPROYAL לא שירות חינמי אבל כל אחד אחר יעשה את העבודה
-                  <br> ​
-                   2. נכנסים לדפדן במצב גלישה בסתר (INCOGNITO)
-                  <br>
-                  ​ 3. גולשים לבדיקת כתובת IP אפשר לרשום בגוגל WHAT IS MY IP או כל אתר אחר שאתם מכירים
-                   https://whatismyipaddress.com/ 
-                  ​<br>
-                  ​ 4. אחרי שראינו שאנחנו מזוהים בניגריה אפשר להיכנס לאתר של נטפליקס
-                   https://www.netflix.com/ng/
-                  ​ כבר במסך הבית רואים שהמטבע המוצע הוא ניגרי NGN
-                </p>
-              </div>
-              <img class="card-img-bottom" src="/assets/img/1.jpg" alt="Card image cap">
-              <div class="card-body">
-                <p class="card-text">
-                  5. מכניסים כתובת מייל שלא רשומה כבר בנטפליקס וממשיכים
-                  ​<br>
-                  ​ 6. ממשיכים ולוחצים NEXT במסך הבא.
-                  ​<br>
-                  ​ 7. במסך שנפתח בוחרים סיסמה שרוצים לחשבון ולוחצים הבא
-                  ​<br>
-                  ​ 8. במסך לאחר מכן לוחצים הבא ומגיעים לבחירת המסלולים
-                  ​<br>
-                  ​ 9. אם עד עכשיו הכל עבר חלק ושירות VPN שלכם מספיק טוב אתם תראו את כל המסלולים לפי המטבע המקומי
-                </p>
-              </div>
-              <img class="card-img-bottom" src="/assets/img/2.jpg" alt="Card image cap">
-              <div class="card-body">
-                <p class="card-text">
-                  10. כמה זה בשקל ?
-                  ​<br> כל 1000 NAIRA (NGN) שווים בערך 2.2ש"ח ,
-                  למה בערך כי שווי המטבע תמיד משתנה כמו דולר ושווי ההמרה של חברות האשראי שונה מחברה לחברה
-                  ​ ​<br>
-                  11. כמה יוצא לנו בשקל ?
-                  המסלול הזול ביותר כ-5ש"ח והיקר ביותר כ-16ש"ח
-                  ​​<br>
-                  12. אחרי שבחרנו את המסלול שמתאים לנו לוחצים הבא
-                  ​​<br>
-                  13. במסך הבא נתבקש להכניס את פרטי האשראי שלנו בצורה תקינה נאשר תקנון ונלחץ START MEMBERSHIP
-                  ​​<br>
-                  14. במידה והתשלום אושר נמשיך למסך הבא להקליד את מספר הטלפון שלנו (צריך ללחוץ על דגל מדינה כדי להחליף לישראל
-                  ​ </p>
-              </div>
-              <img class="card-img-bottom" src="/assets/img/3.jpg" alt="Card image cap">
-              <div class="card-body">
-                <p class="card-text">
-                  מקרים שיכולים להיות במסך הזה :
-                  <br>
-                  במידה ואתם מהנייד ואי אפשר ללחוץ על שינוי קידומת מדינה בדפדפן של כרום (אנדוראיד) לוחצים3 נקודות בצד שמאל למעלה ויש אפשרות שנקראת "אתר שמותאם למחשב"
-                  <br>לוחצים עליו יכול להיות שהעמוד יעשה ריענון וצריך שוב מההתחלה תישארו כבר על המצב הזה ,
-                  <br> מכשירי איפון מקווה שזה לא יקרה לכם אין לי איפון ולא בדקתי אפשרויות סורי.
-                  <br>
-                  במידה ואתם מהמחשב וזה קורה , 
-                  נכנסים לDEV TOOLS (F12) בוחרים להציג את האתר בתצוגת מובייל ואז משנים את קידומת המדינה
-                  ​ ​
-                </p>
-              </div>
-              <img class="card-img-bottom" src="/assets/img/4.jpg" alt="Card image cap">
-              <div class="card-body">
-                <p class="card-text">
-                  15. לוחצים הבא
-                  <br>
-                  ​ 16. במסך הבא שיוצג אתם מגדירים פרופילים למשתמש שלכם , אפשר ללחוץ הבא
-                  <br>
-                  ​ 17. לאחר מכן בוחרים שפה אפשר את כל השפות כמובן גם עברית ולוחצים NEXT
-                </p>
-              </div>
-              <img class="card-img-bottom" src="/assets/img/6.jpg" alt="Card image cap">
-              <div class="card-body">
-                <p class="card-text ">
-                  18. מסך בחירת 3 כותרים שמעניינים אתכם אפשר לבחור משהו וללחוץ FINISHED
-                  <br>
-                  ​ 19. סיימתם , אתם נמצאים בתוך המנוי אבל כנרא רואים הכל באנגלית , צריך ללחוץ על האייקון המרובע של היוזר שלכם ויש שם עיפרון , ללחוץ עליו ולבחור את השפה העברית ושמירה
-                  <br>
-                  <img class="card-img-bottom" src="/assets/img/7.jpg" alt="Card image cap">
-                  <br><br>
-                  <img class="card-img-bottom" src="/assets/img/8.jpg" alt="Card image cap">
-                  <br><br>
-                  <img class="card-img-bottom" src="/assets/img/9.jpg" alt="Card image cap">
-                  ​
-                <p class="card-text"><br>
-                  חשוב מאד !! קיבלתם לאחר ההקמה מייל לאימות הטלפון שלכם תבצעו אימות , תבצעו גם אימות לכתובת המייל דרך האתר...
-                  <br>
-                </p>
-                </p>
-              </div>
-            </div>
+          <div class="googleguidediv">
+            <button onclick="promptPassword('dynamic-content-2','netflix-guide.html')" class="btn btn-primary btn-googleguide">
+              מדריך הקמה עצמית
+            </button>
           </div>
         </div>
-
-      </div>
+        <main id="dynamic-content-2" class="content-area">
+        </main>
     </section>
     <!-- /Pricing Section -->
 
@@ -1155,7 +1040,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script src="gal.js"></script>
 </body>
 
 </html>
