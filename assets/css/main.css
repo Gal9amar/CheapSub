@@ -783,7 +783,7 @@ section,
 
 .btn-spotify {
   background-color: var(--spotify-color);
-  border-color:var(--spotify-color);
+  border-color: var(--spotify-color);
   color: var(--contrast-color);
   /* padding: 0.75rem 2.5rem; */
   border-radius: 20px;
@@ -2710,7 +2710,7 @@ section,
 
 .btn-googleguide {
   background-color: var(--accent-color);
-  border-color:var(--accent-color);
+  border-color: var(--accent-color);
   color: var(--contrast-color);
   /* padding: 0.75rem 2.5rem; */
   border-radius: 20px;
@@ -2719,42 +2719,57 @@ section,
   width: 200px;
   height: 40px;
 }
-.googleguidediv{
+.googleguidediv {
   justify-content: center;
   display: flex;
 }
 .content-area {
-    /* max-width: 800px; */
-    /* margin: 20px auto; */
-    /* padding: 20px; */
-    /* border: 1px solid #ddd; */
-    /* border-radius: 5px; */
-    /* background-color: #f9f9f9; */
-    position: relative; /* נדרש כדי ש- sticky יעבוד */
-    overflow: auto; /* מאפשר גלילה פנימית אם התוכן גדול */
-    max-height: 600px; /* מגביל את גובה האזור */
+  /* max-width: 800px; */
+  /* margin: 20px auto; */
+  /* padding: 20px; */
+  /* border: 1px solid #ddd; */
+  /* border-radius: 5px; */
+  /* background-color: #f9f9f9; */
+  position: relative; /* נדרש כדי ש- sticky יעבוד */
+  overflow: auto; /* מאפשר גלילה פנימית אם התוכן גדול */
+  max-height: 600px; /* מגביל את גובה האזור */
 }
 
 .close-button {
-    position: sticky;
-    top: 40px; /* מרחק מלמעלה */
-    right: 5%;
-    background-color: #ff4d4d;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    width: 100px;
-    height: 30px;
-    font-size: 16px;
-    cursor: pointer;
-    line-height: 30px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    z-index: 10; /* מוודא שהכפתור מעל התוכן */
+  position: sticky;
+  top: 40px; /* מרחק מלמעלה */
+  right: 5%;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  width: 100px;
+  height: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  line-height: 30px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 10; /* מוודא שהכפתור מעל התוכן */
 }
 
 .close-button:hover {
-    background-color: #e60000;
+  background-color: #e60000;
 }
 
+/* netflix new css */
+.card-body ol li {
+  margin-bottom: 15px;
+  font-weight: bold;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
+}
 
+.card-body img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+  border-radius: 8px;
+}
