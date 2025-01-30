@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://cheap-sub.co.il/sitemap.xml
