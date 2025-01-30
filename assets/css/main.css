@@ -54,7 +54,24 @@ body {
   background-color: var(--background-color);
   font-family: var(--default-font);
 }
+.glass-effect {
+    background: rgba(255, 255, 255, 0.918);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+    /* padding: 20px; */
+    /* width: 80%; */
+    /* max-width: 600px; */
+    /* text-align: center; */
+    /* color: white; */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+.glass-effect:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.3);
+}
 a {
   color: var(--accent-color);
   text-decoration: none;
