@@ -41,7 +41,7 @@ function loadContent(contentId, url) {
     .then((data) => {
       // שיבוץ כפתור סגירה והתוכן שהובא
       contentArea.innerHTML = `
-                <button class="close-button" onclick="closeContent('${contentId}')">×</button>
+                <button class="close-button" onclick="closeContent('${contentId}')">סגירה</button>
                 ${data}
             `;
     })

@@ -49,29 +49,6 @@
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
-body {
-  color: var(--default-color);
-  background-color: var(--background-color);
-  font-family: var(--default-font);
-}
-.glass-effect {
-  background: rgba(255, 255, 255, 0.918);
-  backdrop-filter: blur(15px);
-  border-radius: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
-  /* padding: 20px; */
-  /* width: 80%; */
-  /* max-width: 600px; */
-  /* text-align: center; */
-  /* color: white; */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.glass-effect:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.3);
-}
 a {
   color: var(--accent-color);
   text-decoration: none;
@@ -809,7 +786,10 @@ section,
   width: 200px;
   height: 40px;
 }
-
+.btn-spotify:hover {
+  background-color: black;
+  color: white;
+}
 .hero .btn-primary:hover {
   background-color: color-mix(in srgb, var(--accent-color), black 20%);
   border-color: color-mix(in srgb, var(--accent-color), black 20%);
@@ -1236,9 +1216,9 @@ section,
   color: var(--contrast-color);
 }
 
-.features .tab-content {
+/* .features .tab-content {
   margin-top: 30px;
-}
+} */
 
 .features .tab-pane h3 {
   color: var(--heading-color);
@@ -1306,6 +1286,7 @@ section,
 }
 .ps {
   list-style: none !important;
+  /* margin: 50px; */
 }
 .psul {
   display: inline;
@@ -2408,24 +2389,8 @@ section,
 /* ----------SPOTIFY--------------------------- */
 
 /* ===== PRICING PAGE ===== */
-.price-tabs {
-  background-color: #fff;
-  -webkit-box-shadow: 0 5px 20px 0 rgba(39, 39, 39, 0.1);
-  box-shadow: 0 5px 20px 0 rgba(39, 39, 39, 0.1);
-  display: inline-block;
-  padding: 7px;
-  border-radius: 40px;
-  border: 1px solid var(--accent-color);
-  margin-bottom: 45px;
-}
 
-@media (min-width: 768px) {
-  .price-tabs {
-    margin-bottom: 60px;
-  }
-}
-
-.price-tabs .nav-link {
+.nav-link {
   color: var(--accent-color);
   font-weight: 500;
   font-family: "Montserrat", sans-serif;
@@ -2439,12 +2404,12 @@ section,
 }
 
 @media (min-width: 768px) {
-  .price-tabs .nav-link {
+  .nav-link {
     padding: 12px 40px;
   }
 }
 
-.price-tabs .nav-link.active {
+.nav-link.active {
   background-color: var(--accent-color);
   color: #fff;
 }
@@ -2454,6 +2419,7 @@ section,
   -webkit-box-shadow: 0 5px 30px 0 rgba(39, 39, 39, 0.15);
   box-shadow: 0 5px 30px 0 rgba(39, 39, 39, 0.15);
   border-radius: 10px;
+  border: solid 0.1px black;
 }
 
 @media (min-width: 768px) {
@@ -2586,6 +2552,7 @@ section,
 
 .liright {
   text-align: right !important;
+  line-height: 1; /* צמצום גובה השורה */
 }
 .marg {
   margin: 20px;
@@ -2691,9 +2658,22 @@ section,
   opacity: 1;
   transform: translateY(0);
 }
-.price-container {
-  background: url("/assets/img/Spotify_Full.png"), black;
-  background-size: contain;
+.price-container-spotify {
+  background: url("/assets/img/spotifybg.jpg"), rgb(0, 0, 0);
+  background-size: cover;
+  height: 130px;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #000000;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+.price-container-ps {
+  background: url("/assets/img/psplus.jpg"), rgb(0, 0, 0);
+  background-size: cover;
+  height: 130px;
   background-position: center;
   background-repeat: no-repeat;
   color: #000000;
@@ -2800,4 +2780,95 @@ section,
 }
 .dropdown:hover .dropdown-menu {
   display: block;
+}
+
+/* playstation card design */
+.btn-psn {
+  background-color: var(--accent-color);
+  /* border-color: var(--spotify-color); */
+  color: var(--contrast-color);
+  /* padding: 0.75rem 2.5rem; */
+  border-radius: 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  width: 200px;
+  height: 40px;
+}
+.btn-psn:hover {
+  background-color: black;
+  color: white;
+}
+.ps-card-hight {
+  height: 510px;
+}
+
+.price-item .price-top-ps-essential:after {
+  height: 50px;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+  background: linear-gradient(0deg, rgb(5, 130, 247), rgb(0, 0, 0));
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -17px;
+  z-index: -1;
+  -webkit-transform: skewY(5deg);
+  transform: skewY(5deg);
+  -webkit-box-shadow: 0 5px 10px 0 rgba(113, 113, 113, 0.15);
+  box-shadow: 0 5px 10px 0 rgba(113, 113, 113, 0.15);
+}
+.price-item .price-top-ps-extra:after {
+  height: 50px;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+  background: linear-gradient(0deg, rgb(247, 222, 2), rgb(0, 0, 0));
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -17px;
+  z-index: -1;
+  -webkit-transform: skewY(5deg);
+  transform: skewY(5deg);
+  -webkit-box-shadow: 0 5px 10px 0 rgba(113, 113, 113, 0.15);
+  box-shadow: 0 5px 10px 0 rgba(113, 113, 113, 0.15);
+}
+.price-item .price-top-ps-deluxe:after {
+  height: 50px;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+  background: linear-gradient(0deg, rgb(156, 156, 156), rgb(0, 0, 0));
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -17px;
+  z-index: -1;
+  -webkit-transform: skewY(5deg);
+  transform: skewY(5deg);
+  -webkit-box-shadow: 0 5px 10px 0 rgba(113, 113, 113, 0.15);
+  box-shadow: 0 5px 10px 0 rgba(113, 113, 113, 0.15);
+}
+/* <!-- /youtube premium --> */
+.youtube-premium {
+  background-color: rgb(0, 0, 0);
+  border-radius: 15px;
+  color: white;
+  padding: 20px 20px 20px 20px;
+}
+.yt-head {
+  color: red;
+}
+.yt-order-btn {
+  background-color: red;
+  border-color: white;
+  color: var(--contrast-color);
+  /* padding: 0.75rem 2.5rem; */
+  border-radius: 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  width: 200px;
+  height: 40px;
+}
+.yt-order-btn:hover {
+  background-color: white;
+  color: black;
 }
