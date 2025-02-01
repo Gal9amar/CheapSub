@@ -38,9 +38,20 @@
 <body class="index-page">
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-      <a class="btn-getstarted" href="https://wa.me/+972529070000" target="_blank" aria-label="שלח הודעה בוואטסאפ">שלח הודעה</a>
+      <a class="btn-getstarted" href="javascript:void(0);" onclick="sendWhatsAppMessageGuide()" aria-label="שלח הודעה בוואטסאפ">שלח הודעה</a>
       <nav id="navmenu" class="navmenu">
         <ul>
+          <li>
+            <div class="dropdown">
+              <button class="dropdown-toggle" type="button" id="dropdownMenuButton">
+                מדריכים
+              </button>
+              <div class="dropdown-menu">
+                <a onclick="promptPassword('dynamic-content-1', 'google-guide.html', event)" class="dropdown-item" href="#dynamic-content-1">גוגל</a>
+                <a onclick="promptPassword('dynamic-content-2', 'netflix-guide.html', event)" class="dropdown-item" href="#dynamic-content-2">טפליקס</a>
+              </div>
+            </div>
+          </li>
           <li><a href="#spotify-premium" tabindex="0">Spotify</a></li>
           <li><a href="#playstation-plus" tabindex="0">PlayStation</a></li>
           <li><a href="#google-one" tabindex="0">Google One</a></li>
@@ -52,6 +63,7 @@
     </div>
   </header>
   <main class="main">
+
     <!-- Hero Section -->
     <section id="hero" class="hero section">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -139,6 +151,7 @@
         </div>
       </div>
     </section><!-- /Hero Section -->
+
     <!-- About Section -->
     <section id="about" class="about section">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -216,7 +229,7 @@
                           <span>ארגון של התור להאזנה</span>
                         </li>
                       </ul>
-                      <a href="https://wa.me/+972529070000" target="_blank"><button style="border-radius: 20px ;width: 200px;" class="btn btn-primary btndown">
+                      <a href="javascript:void(0);" onclick="sendWhatsAppMessageBuy()" target="_blank"><button style="border-radius: 20px ;width: 200px;" class="btn btn-primary btndown">
                           רכוש עכשיו
                         </button></a>
                     </div>
@@ -257,7 +270,7 @@
                           <span>ארגון של התור להאזנה</span>
                         </li>
                       </ul>
-                      <a href="https://wa.me/+972529070000" target="_blank"><button style="border-radius: 20px ;width: 200px;" class="btn btn-primary btndown">
+                      <a href="javascript:void(0);" onclick="sendWhatsAppMessageBuy()" target="_blank"><button style="border-radius: 20px ;width: 200px;" class="btn btn-primary btndown">
                           רכוש עכשיו
                         </button></a>
                     </div>
@@ -298,7 +311,7 @@
                           <span>ארגון של התור להאזנה</span>
                         </li>
                       </ul>
-                      <a href="https://wa.me/+972529070000" target="_blank"><button style="border-radius: 20px ;width: 200px;" class="btn btn-light btndown">
+                      <a href="javascript:void(0);" onclick="sendWhatsAppMessageBuy()" target="_blank"><button style="border-radius: 20px ;width: 200px;" class="btn btn-light btndown">
                           רכוש עכשיו
                         </button></a>
                     </div>
@@ -344,7 +357,7 @@
                           <span>ארגון של התור להאזנה</span>
                         </li>
                       </ul>
-                      <a href="https://wa.me/+972529070000" target="_blank"><button class="btn btn-spotify ">
+                      <a href="javascript:void(0);" onclick="sendWhatsAppMessageBuy()" target="_blank"><button class="btn btn-spotify ">
                           רכוש עכשיו
                         </button></a>
                     </div>
@@ -386,7 +399,7 @@
                           <span>ארגון של התור להאזנה</span>
                         </li>
                       </ul>
-                      <a href="https://wa.me/+972529070000" target="_blank"><button class="btn btn-spotify">
+                      <a href="javascript:void(0);" onclick="sendWhatsAppMessageBuy()" target="_blank"><button class="btn btn-spotify">
                           רכוש עכשיו
                         </button></a>
                     </div>
@@ -428,7 +441,7 @@
                           <span>ארגון של התור להאזנה</span>
                         </li>
                       </ul>
-                      <a href="https://wa.me/+972529070000" target="_blank"><button class="btn btn-spotify">
+                      <a href="javascript:void(0);" onclick="sendWhatsAppMessageBuy()" target="_blank"><button class="btn btn-spotify">
                           רכוש עכשיו
                         </button></a>
                     </div>
@@ -453,7 +466,7 @@
               <br>גישה מלאה למשתמש ואפשרויות שחזור במידת הצורך.
               <br>ניתן להוסיף את המשתמש החדש לקונסולה ולהמשיך לשחק מהמשתמש הראשי שלכם במשחקי אונליין ללא בעיה.
             </p>
-            <a href="https://wa.me/+972529070000" target="_blank" class="btn btn-cta">להזמנה</a>
+            <a href="javascript:void(0);" onclick="sendWhatsAppMessageBuy()" target="_blank" class="btn btn-cta">להזמנה</a>
           </div>
         </div>
       </div>
@@ -564,12 +577,9 @@
                   <li><i class="bi bi-check2-all"></i> <span>גיבוי מסמכים</span></li>
                   <li><i class="bi bi-check2-all"></i> <span>גיבוי לגלריית התמונות</span></li>
                 </ul>
-                <a href="https://wa.me/+972529070000" target="_blank"><button style="border-radius: 20px ;width: 200px;" class="btn btn-primary btndown">
+                <a href="javascript:void(0);" onclick="sendWhatsAppMessageBuy()" target="_blank"><button style="border-radius: 20px ;width: 200px;" class="btn btn-primary btndown">
                     הזמן
-                  </button></a><br>
-                <button onclick="promptPassword('dynamic-content-1','google-guide.html')" style="border-radius: 20px ;width: 200px;" class="btn btn-dark btndown">
-                  מדריך הקמה עצמית
-                </button>
+                  </button></a>
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center">
                 <img src="assets/img/‏‏100g.jpg" alt="תמונה של גיבוי 100GB" class="img-fluid googlepic" style="border-radius: 10px; transition: transform 0.3s ease;">
@@ -591,12 +601,9 @@
                   <li><i class="bi bi-check2-all"></i> <span>גיבוי לגלריית התמונות</span></li>
                   <li><i class="bi bi-check2-all"></i> <span>גיבוי סרטונים</span></li>
                 </ul>
-                <a href="https://wa.me/+972529070000" target="_blank"><button style="border-radius: 20px ;width: 200px;" class="btn btn-primary btndown">
+                <a href="javascript:void(0);" onclick="sendWhatsAppMessageBuy()" target="_blank"><button style="border-radius: 20px ;width: 200px;" class="btn btn-primary btndown">
                     הזמן
-                  </button></a><br>
-                <button onclick="promptPassword('dynamic-content-1','google-guide.html')" style="border-radius: 20px ;width: 200px;" class="btn btn-dark btndown">
-                  מדריך הקמה עצמית
-                </button>
+                  </button></a>
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center">
                 <img src="assets/img/‏‏2t.jpg" alt="תמונה של גיבוי 2TB" class="img-fluid googlepic" style="border-radius: 10px; transition: transform 0.3s ease;">
@@ -636,7 +643,7 @@
             </div>
             <!-- הוספת כפתור קריאה לפעולה עם נגישות משופרת -->
             <div class="ytbtnorder text-center">
-              <a href="https://wa.me/+972529070000" target="_blank" class="btn btn-cta" aria-label="הזמנת יוטיוב פרימיום בוואטסאפ">להזמנה</a>
+              <a href="javascript:void(0);" onclick="sendWhatsAppMessageBuy()" target="_blank" class="btn btn-cta" aria-label="הזמנת יוטיוב פרימיום בוואטסאפ">להזמנה</a>
             </div>
           </div>
         </div>
@@ -692,7 +699,7 @@
                   <br>1
                 </li>
               </ul>
-              <a href="https://wa.me/+972529070000" target="_blank" class="btn btn-primary btndown">
+              <a href="javascript:void(0);" onclick="sendWhatsAppMessageBuy()" target="_blank" class="btn btn-primary btndown">
                 תקים עבורי
                 <!-- <i class="bi bi-arrow-right"></i> -->
               </a>
@@ -738,7 +745,7 @@
                   <br>1
                 </li>
               </ul>
-              <a href="https://wa.me/+972529070000" target="_blank" class="btn btn-primary btndown">
+              <a href="javascript:void(0);" onclick="sendWhatsAppMessageBuy()" target="_blank" class="btn btn-primary btndown">
                 תקים עבורי
                 <!-- <i class="bi bi-arrow-right"></i> -->
               </a>
@@ -784,7 +791,7 @@
                   <br>2
                 </li>
               </ul>
-              <a href="https://wa.me/+972529070000" target="_blank" class="btn btn-primary btndown">
+              <a href="javascript:void(0);" onclick="sendWhatsAppMessageBuy()" target="_blank" class="btn btn-primary btndown">
                 תקים עבורי
                 <!-- <i class="bi bi-arrow-right"></i> -->
               </a>
@@ -831,7 +838,7 @@
                   <br>6
                 </li>
               </ul>
-              <a href="https://wa.me/+972529070000" target="_blank" class="btn btn-light btndown">
+              <a href="javascript:void(0);" onclick="sendWhatsAppMessageBuy()" target="_blank" class="btn btn-light btndown">
                 תקים עבורי
                 <!-- <i class="bi bi-arrow-right"></i> -->
               </a>
@@ -839,15 +846,7 @@
           </div>
         </div>
       </div>
-      <div><br>
-        <p>
-        <div class="d-flex justify-content-center">
-          <div class="googleguidediv">
-            <button onclick="promptPassword('dynamic-content-2','netflix-guide.html')" class="btn btn-primary btn-googleguide">
-              מדריך הקמה עצמית
-            </button>
-          </div>
-        </div>
+      <div>
         <main id="dynamic-content-2" class="content-area">
         </main>
     </section>

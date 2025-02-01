@@ -6,7 +6,8 @@ function promptPassword(contentId, url) {
   const password = prompt('כדי לצפות במדריך החינמי יש לבקש סיסמה ע"י שליחת הודעה\nלחץ על הלחצן הירוק בראש העמוד שלח הודעה');
 
   if (password === null) {
-    // אם המשתמש לחץ על ביטול, אל תעשה כלום
+    // אם המשתמש לחץ על ביטול, מנוע את ברירת המחדל של הלינק
+    event.preventDefault();
     return;
   }
 
@@ -14,6 +15,7 @@ function promptPassword(contentId, url) {
     loadContent(contentId, url);
   } else {
     alert("סיסמה לא נכונה, נסה שוב.");
+    event.preventDefault(); // מניעת הגלילה במקרה של סיסמה שגויה
   }
 }
 
@@ -58,4 +60,18 @@ function closeContent(contentId) {
 
   // הצגת כפתורי הפתיחה מחדש
   buttons.forEach((button) => (button.style.display = "inline-block"));
+}
+function sendWhatsAppMessageGuide() {
+  const phoneNumber = "+972529070000"; // מספר הטלפון שלך
+  const message = "שלום, אני רוצה לקבל את הסיסמה לצפייה במדריך.";
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  window.open(whatsappUrl, "_blank");
+  closePasswordPopup();
+}
+function sendWhatsAppMessageBuy() {
+  const phoneNumber = "+972529070000"; // מספר הטלפון שלך
+  const message = "שלום , אני מתעניין במוצר מהאתר שלך";
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  window.open(whatsappUrl, "_blank");
+  closePasswordPopup();
 }
