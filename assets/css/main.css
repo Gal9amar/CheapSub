@@ -2802,6 +2802,13 @@ section,
   height: 510px;
 }
 
+@media (max-width: 768px) {
+  .ps-card-hight {
+    height: auto;
+  }
+}
+
+
 .price-item .price-top-ps-essential:after {
   height: 50px;
   width: 100%;
