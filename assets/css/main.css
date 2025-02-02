@@ -2479,11 +2479,17 @@ section,
 }
 
 .price-item .price-top h2 sup {
-  top: 15px;
+  top: 25px;
   /* left: -5px; */
-  font-size: 1em;
+  font-size: 0.5em;
   font-weight: 500;
   vertical-align: top;
+}
+/* למובייל */
+@media (max-width: 768px) {
+  .price-item .price-top h2 sup {
+    top: 20px;
+  }
 }
 
 .price-item .price-content {
@@ -2682,6 +2688,18 @@ section,
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
+.price-container-google {
+  background: url("/assets/img/Google_One.png"), rgb(0, 0, 0);
+  background-size: cover;
+  height: 130px;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #000000;
+  /* padding: 20px 30px; */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
 
 .price-container div {
   font-weight: 500;
@@ -2853,6 +2871,34 @@ section,
   transform: skewY(5deg);
   -webkit-box-shadow: 0 5px 10px 0 rgba(113, 113, 113, 0.15);
   box-shadow: 0 5px 10px 0 rgba(113, 113, 113, 0.15);
+}
+.price-item .price-top-google:after {
+  height: 50px;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+  background: linear-gradient(0deg, rgb(178, 1, 194), rgb(0, 0, 0));
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -17px;
+  z-index: -1;
+  -webkit-transform: skewY(5deg);
+  transform: skewY(5deg);
+  -webkit-box-shadow: 0 5px 10px 0 rgba(113, 113, 113, 0.15);
+  box-shadow: 0 5px 10px 0 rgba(113, 113, 113, 0.15);
+}
+.btn-google {
+  background-color: rgb(178, 1, 194);
+  color: var(--contrast-color);
+  border-radius: 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  width: 200px;
+  height: 40px;
+}
+.btn-google:hover {
+  background-color: black;
+  color: white;
 }
 /* <!-- /youtube premium --> */
 .youtube-premium {
