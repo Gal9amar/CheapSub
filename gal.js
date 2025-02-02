@@ -68,10 +68,15 @@ function sendWhatsAppMessageGuide() {
   window.open(whatsappUrl, "_blank");
   closePasswordPopup();
 }
-function sendWhatsAppMessageBuy() {
+function sendWhatsAppMessageBuy(productName, productPrice, productDescription) {
   const phoneNumber = "+972529070000"; // מספר הטלפון שלך
-  const message = "שלום , אני מתעניין במוצר מהאתר שלך";
+  const message = `שלום, אני מתעניין במוצר מהאתר שלך:
+  
+  שם המוצר: ${productName}
+  מחיר: ${productPrice}
+  `;
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   window.open(whatsappUrl, "_blank");
   closePasswordPopup();
 }
+
