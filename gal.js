@@ -1,5 +1,5 @@
 // הגדרת משתנה הסיסמה בתחילת הקובץ
-const correctPassword = "9070000"; // סיסמה נכונה
+const correctPassword = "2025"; // סיסמה נכונה
 
 // פונקציה לבדיקת סיסמה
 function promptPassword(contentId, url) {
