@@ -2688,18 +2688,6 @@ section,
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
-.price-container-google {
-  background: url("/assets/img/Google_One.png"), rgb(0, 0, 0);
-  background-size: cover;
-  height: 130px;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #000000;
-  /* padding: 20px 30px; */
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  text-align: center;
-}
 
 .price-container div {
   font-weight: 500;
@@ -2872,6 +2860,24 @@ section,
   -webkit-box-shadow: 0 5px 10px 0 rgba(113, 113, 113, 0.15);
   box-shadow: 0 5px 10px 0 rgba(113, 113, 113, 0.15);
 }
+.price-container-google {
+  background: url("/assets/img/Google_One.png"), rgb(0, 0, 0);
+  background-size: cover;
+  height: 130px;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #000000;
+  /* padding: 20px 30px; */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .price-container-google {
+    height: 130px; /* מגדיל את גובה הקונטיינר */
+    background-size: 150%; /* מגדיל את התמונה */
+  }
+}
 .price-item .price-top-google:after {
   height: 50px;
   width: 100%;
@@ -2897,6 +2903,102 @@ section,
   height: 40px;
 }
 .btn-google:hover {
+  background-color: black;
+  color: white;
+}
+
+.price-container-youtube {
+  background: url("/assets/img/YTP_logo_social_1200x630.png"), rgb(0, 0, 0);
+  background-size: cover;
+  height: 130px;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #000000;
+  /* padding: 20px 30px; */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .price-container-youtube {
+    height: 130px; /* מגדיל את גובה הקונטיינר */
+    background-size: 140%; /* מגדיל את התמונה */
+  }
+}
+.price-item .price-top-youtube:after {
+  height: 50px;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+  background: linear-gradient(0deg, rgb(255,0,0), rgb(0, 0, 0));
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -17px;
+  z-index: -1;
+  -webkit-transform: skewY(5deg);
+  transform: skewY(5deg);
+  -webkit-box-shadow: 0 5px 10px 0 rgba(113, 113, 113, 0.15);
+  box-shadow: 0 5px 10px 0 rgba(113, 113, 113, 0.15);
+}
+.btn-youtube {
+  background-color: rgb(255,0,0);
+  color: var(--contrast-color);
+  border-radius: 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  width: 200px;
+  height: 40px;
+}
+.btn-youtube:hover {
+  background-color: black;
+  color: white;
+}
+.price-container-soundcloud {
+  background: url("/assets/img/soundcloud.png"), rgb(0, 0, 0);
+  background-size: cover;
+  height: 130px;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #000000;
+  /* padding: 20px 30px; */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  
+}
+@media screen and (max-width: 768px) {
+  .price-container-soundcloud {
+    height: 130px; /* מגדיל את גובה הקונטיינר */
+    background-size: 250%; /* מגדיל את התמונה */
+  }
+}
+
+
+.price-item .price-top-soundcloud:after {
+  height: 50px;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+  background: linear-gradient(0deg, rgb(255,105,0), rgb(0, 0, 0));
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -17px;
+  z-index: -1;
+  -webkit-transform: skewY(5deg);
+  transform: skewY(5deg);
+  -webkit-box-shadow: 0 5px 10px 0 rgba(113, 113, 113, 0.15);
+  box-shadow: 0 5px 10px 0 rgba(113, 113, 113, 0.15);
+}
+.btn-soundcloud {
+  background-color: rgb(255,105,0);
+  color: var(--contrast-color);
+  border-radius: 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  width: 200px;
+  height: 40px;
+}
+.btn-soundcloud:hover {
   background-color: black;
   color: white;
 }
