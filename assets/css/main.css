@@ -566,14 +566,23 @@ h6 {
   position: fixed;
   visibility: hidden;
   opacity: 0;
-  right: 15px;
-  bottom: 50px!important;
+  right: 5px;
+  bottom: 70px!important;
   z-index: 99999;
   /* background-color: var(--accent-color); */
   width: 44px;
-  height: 44px;
+  /* height: 50px; */
   border-radius: 50px;
   transition: all 0.4s;
+}
+/* 📱 Small screens (max-width: 480px) */
+@media (max-width: 760px) {
+  .scroll-top {
+    width: 44px; /* Smaller button */
+    /* height: 36px; Ensure it's a circle */
+    bottom: 160px !important; /* Adjust position */
+    right: 10px; /* Slightly shift for better placement */
+  }
 }
 
 .scroll-top i {
@@ -3070,3 +3079,6 @@ section,
         font-size: 18px;
     }
 }
+/* #bthn{
+  bottom: 10px !important;
+} */
