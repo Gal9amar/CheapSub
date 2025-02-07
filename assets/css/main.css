@@ -3027,3 +3027,7 @@ section,
   background-color: white;
   color: black;
 }
+.hanging-indent {
+            padding-left: 30px; /* יוצר מרווח כדי שהשורות לא ייכנסו מתחת למספר */
+            text-indent: -00px; /* מחזיר את השורה הראשונה אחורה */
+}
