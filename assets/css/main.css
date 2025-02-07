@@ -982,17 +982,17 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 20%);
 }
 
-.about .feature-list-wrapper {
+.about {
   margin-bottom: 2rem;
 }
 
-.about .feature-list {
+.about {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.about .feature-list li {
+.about li {
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -1000,7 +1000,7 @@ section,
   font-size: 1rem;
 }
 
-.about .feature-list li i {
+.about li i {
   color: var(--accent-color);
   font-size: 1.25rem;
 }
@@ -3026,4 +3026,47 @@ section,
 .yt-order-btn:hover {
   background-color: white;
   color: black;
+}
+/* Ensure list is in RTL mode */
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    direction: rtl; /* Forces right-to-left layout */
+    text-align: right; /* Align text properly */
+}
+
+/* Ensure list items are properly aligned */
+.feature-list li {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse; /* Ensures icon is always on the right */
+    gap: 10px; /* Space between icon and text */
+    font-size: 16px;
+    margin-bottom: 10px;
+    word-break: break-word; /* Ensure long words wrap */
+}
+
+/* Ensure the icon stays on the right */
+.feature-list i {
+    color: #28a745; /* Green checkmark */
+    font-size: 20px;
+    flex-shrink: 0; /* Prevent shrinking */
+    margin-left: 8px; /* Space between icon and text */
+}
+
+/* Ensure text is properly aligned */
+.feature-list span {
+    flex: 1; /* Allow text to take full width */
+    text-align: right; /* Ensure text is properly aligned */
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .feature-list li {
+        font-size: 14px;
+    }
+    .feature-list i {
+        font-size: 18px;
+    }
 }
