@@ -2817,6 +2817,14 @@ section,
 #spotify-premium .bi-spotify{
   color: #000000;
 }
+.spotify-card-hight {
+  height: 500px;
+}
+@media (max-width: 768px) {
+  .spotify-card-hight {
+    height: auto;
+  }
+}
 /* playstation card design */
 .price-container-playstation {
   background: url("/assets/img/psplus.jpg"), rgb(0, 0, 0);
@@ -2868,7 +2876,7 @@ section,
   border: solid 0.1px var(--playstation_color);
 }
 .playstation-card-hight {
-  height: 510px;
+  height: 500px;
 }
 @media (max-width: 768px) {
   .playstation-card-hight {
@@ -3120,16 +3128,15 @@ section,
 #netflix .bi-badge-hd{
   color: #000000;
 }
-/* <!-- /youtube premium --> */
-.youtube-premium {
-  background-color: rgb(0, 0, 0);
-  border-radius: 15px;
-  color: white;
-  padding: 20px 20px 20px 20px;
-}
 .netflix-card-hight {
-  height: 380px;
+  height: 510px;
 }
+@media (max-width: 768px) {
+  .netflix-card-hight {
+    height: auto;
+  }
+}
+
 
 /* Ensure list is in RTL mode */
 .feature-list {
