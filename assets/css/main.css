@@ -12,7 +12,6 @@
   --heading-color: #2d465e; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #0d83fd; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --spotify-color: #009233;
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
@@ -784,21 +783,6 @@ section,
   transition: all 0.3s ease;
 }
 
-.btn-spotify {
-  background-color: var(--spotify-color);
-  border-color: var(--spotify-color);
-  color: var(--contrast-color);
-  /* padding: 0.75rem 2.5rem; */
-  border-radius: 20px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  width: 200px;
-  height: 40px;
-}
-.btn-spotify:hover {
-  background-color: black;
-  color: white;
-}
 .hero .btn-primary:hover {
   background-color: color-mix(in srgb, var(--accent-color), black 20%);
   border-color: color-mix(in srgb, var(--accent-color), black 20%);
@@ -2428,7 +2412,6 @@ section,
   -webkit-box-shadow: 0 5px 30px 0 rgba(39, 39, 39, 0.15);
   box-shadow: 0 5px 30px 0 rgba(39, 39, 39, 0.15);
   border-radius: 10px;
-  border: solid 0.1px black;
 }
 
 @media (min-width: 768px) {
@@ -2673,31 +2656,6 @@ section,
   opacity: 1;
   transform: translateY(0);
 }
-.price-container-spotify {
-  background: url("/assets/img/spotifybg.jpg"), rgb(0, 0, 0);
-  background-size: cover;
-  height: 130px;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #000000;
-  padding: 20px 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  text-align: center;
-}
-.price-container-ps {
-  background: url("/assets/img/psplus.jpg"), rgb(0, 0, 0);
-  background-size: cover;
-  height: 130px;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #000000;
-  padding: 20px 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  text-align: center;
-}
-
 .price-container div {
   font-weight: 500;
   font-size: 20px;
@@ -2797,12 +2755,105 @@ section,
   display: block;
 }
 
-/* playstation card design */
-.btn-psn {
-  background-color: var(--accent-color);
-  /* border-color: var(--spotify-color); */
+/* צבעי כפתור ומחיר לכרטיס */
+:root {
+  --spotify_color: rgb(19, 197, 120);
+  --playstation_color: rgb(5, 130, 247);
+  --google_color: rgb(178, 1, 194);
+  --youtube_color: rgb(255, 0, 0);
+  --soundcloud_color: rgb(255, 105, 0);
+  --netflix-color: rgb(255, 0, 0);
+}
+/* spotify card */
+.price-container-spotify {
+  background: url("/assets/img/spotifybg.jpg"), rgb(0, 0, 0);
+  background-size: cover;
+  height: 130px;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #000000;
+  /* padding: 20px 30px; */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .price-container-spotify {
+    height: 100px; /* מגדיל את גובה הקונטיינר */
+    background-size: 150%; /* מגדיל את התמונה */
+  }
+}
+.price-item .price-top-spotify:after {
+  height: 50px;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+  background: linear-gradient(0deg, var(--spotify_color), rgb(0, 0, 0));
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -17px;
+  z-index: -1;
+  -webkit-transform: skewY(5deg);
+  transform: skewY(5deg);
+  -webkit-box-shadow: 0 5px 10px 0 rgba(113, 113, 113, 0.15);
+  box-shadow: 0 5px 10px 0 rgba(113, 113, 113, 0.15);
+}
+.btn-spotify {
+  background-color: var(--spotify_color);
   color: var(--contrast-color);
-  /* padding: 0.75rem 2.5rem; */
+  border-radius: 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  width: 200px;
+  height: 40px;
+}
+.btn-spotify:hover {
+  background-color: black;
+  color: white;
+}
+#spotify-premium .price-item {
+  border: solid 0.1px var(--spotify_color);
+}
+#spotify-premium .bi-spotify{
+  color: #000000;
+}
+/* playstation card design */
+.price-container-playstation {
+  background: url("/assets/img/psplus.jpg"), rgb(0, 0, 0);
+  background-size: cover;
+  height: 130px;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #000000;
+  /* padding: 20px 30px; */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .price-container-playstation {
+    height: 100px; /* מגדיל את גובה הקונטיינר */
+    background-size: 180%; /* מגדיל את התמונה */
+  }
+}
+.price-item .price-top-playstation:after {
+  height: 50px;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+  background: linear-gradient(0deg, var(--playstation_color), rgb(0, 0, 0));
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -17px;
+  z-index: -1;
+  -webkit-transform: skewY(5deg);
+  transform: skewY(5deg);
+  -webkit-box-shadow: 0 5px 10px 0 rgba(113, 113, 113, 0.15);
+  box-shadow: 0 5px 10px 0 rgba(113, 113, 113, 0.15);
+}
+.btn-psn {
+  background-color: var(--playstation_color);
+  color: var(--contrast-color);
   border-radius: 20px;
   font-weight: 500;
   transition: all 0.3s ease;
@@ -2813,61 +2864,21 @@ section,
   background-color: black;
   color: white;
 }
-.ps-card-hight {
+#playstation-plus .price-item {
+  border: solid 0.1px var(--playstation_color);
+}
+.playstation-card-hight {
   height: 510px;
 }
-
 @media (max-width: 768px) {
-  .ps-card-hight {
+  .playstation-card-hight {
     height: auto;
   }
 }
-
-.price-item .price-top-ps-essential:after {
-  height: 50px;
-  width: 100%;
-  border-radius: 0 0 10px 10px;
-  background: linear-gradient(0deg, rgb(5, 130, 247), rgb(0, 0, 0));
-  position: absolute;
-  content: "";
-  left: 0;
-  bottom: -17px;
-  z-index: -1;
-  -webkit-transform: skewY(5deg);
-  transform: skewY(5deg);
-  -webkit-box-shadow: 0 5px 10px 0 rgba(113, 113, 113, 0.15);
-  box-shadow: 0 5px 10px 0 rgba(113, 113, 113, 0.15);
+#playstation-plus .bi-playstation{
+  color: #000000;
 }
-.price-item .price-top-ps-extra:after {
-  height: 50px;
-  width: 100%;
-  border-radius: 0 0 10px 10px;
-  background: linear-gradient(0deg, rgb(247, 222, 2), rgb(0, 0, 0));
-  position: absolute;
-  content: "";
-  left: 0;
-  bottom: -17px;
-  z-index: -1;
-  -webkit-transform: skewY(5deg);
-  transform: skewY(5deg);
-  -webkit-box-shadow: 0 5px 10px 0 rgba(113, 113, 113, 0.15);
-  box-shadow: 0 5px 10px 0 rgba(113, 113, 113, 0.15);
-}
-.price-item .price-top-ps-deluxe:after {
-  height: 50px;
-  width: 100%;
-  border-radius: 0 0 10px 10px;
-  background: linear-gradient(0deg, rgb(156, 156, 156), rgb(0, 0, 0));
-  position: absolute;
-  content: "";
-  left: 0;
-  bottom: -17px;
-  z-index: -1;
-  -webkit-transform: skewY(5deg);
-  transform: skewY(5deg);
-  -webkit-box-shadow: 0 5px 10px 0 rgba(113, 113, 113, 0.15);
-  box-shadow: 0 5px 10px 0 rgba(113, 113, 113, 0.15);
-}
+/* עיצוב כרטיס גוגל */
 .price-container-google {
   background: url("/assets/img/Google_One.png"), rgb(0, 0, 0);
   background-size: cover;
@@ -2882,7 +2893,7 @@ section,
 }
 @media screen and (max-width: 768px) {
   .price-container-google {
-    height: 130px; /* מגדיל את גובה הקונטיינר */
+    height: 100px; /* מגדיל את גובה הקונטיינר */
     background-size: 150%; /* מגדיל את התמונה */
   }
 }
@@ -2890,7 +2901,7 @@ section,
   height: 50px;
   width: 100%;
   border-radius: 0 0 10px 10px;
-  background: linear-gradient(0deg, rgb(178, 1, 194), rgb(0, 0, 0));
+  background: linear-gradient(0deg, var(--google_color), rgb(0, 0, 0));
   position: absolute;
   content: "";
   left: 0;
@@ -2902,7 +2913,7 @@ section,
   box-shadow: 0 5px 10px 0 rgba(113, 113, 113, 0.15);
 }
 .btn-google {
-  background-color: rgb(178, 1, 194);
+  background-color: var(--google_color);
   color: var(--contrast-color);
   border-radius: 20px;
   font-weight: 500;
@@ -2914,7 +2925,21 @@ section,
   background-color: black;
   color: white;
 }
-
+#google-one .price-item {
+  border: solid 0.1px var(--google_color);
+}
+.google-card-hight {
+  height: 510px;
+}
+@media (max-width: 768px) {
+  .google-card-hight {
+    height: auto;
+  }
+}
+#google-one .bi-google{
+  color: #000000;
+}
+/* עיצוב כרטיס יוטיוב */
 .price-container-youtube {
   background: url("/assets/img/YTP_logo_social_1200x630.png"), rgb(0, 0, 0);
   background-size: cover;
@@ -2929,7 +2954,7 @@ section,
 }
 @media screen and (max-width: 768px) {
   .price-container-youtube {
-    height: 130px; /* מגדיל את גובה הקונטיינר */
+    height: 100px; /* מגדיל את גובה הקונטיינר */
     background-size: 140%; /* מגדיל את התמונה */
   }
 }
@@ -2937,7 +2962,7 @@ section,
   height: 50px;
   width: 100%;
   border-radius: 0 0 10px 10px;
-  background: linear-gradient(0deg, rgb(255, 0, 0), rgb(0, 0, 0));
+  background: linear-gradient(0deg, var(--youtube_color), rgb(0, 0, 0));
   position: absolute;
   content: "";
   left: 0;
@@ -2949,7 +2974,7 @@ section,
   box-shadow: 0 5px 10px 0 rgba(113, 113, 113, 0.15);
 }
 .btn-youtube {
-  background-color: rgb(255, 0, 0);
+  background-color: var(--youtube_color);
   color: var(--contrast-color);
   border-radius: 20px;
   font-weight: 500;
@@ -2961,6 +2986,21 @@ section,
   background-color: black;
   color: white;
 }
+#youtube-premium .price-item {
+  border: solid 0.1px var(--youtube_color);
+}
+.youtube-card-hight {
+  height: 510px;
+}
+@media (max-width: 768px) {
+  .youtube-card-hight {
+    height: auto;
+  }
+}
+#youtube-premium .bi-youtube{
+  color: #000000;
+}
+/* עיצוב כרטיס soundcloud */
 .price-container-soundcloud {
   background: url("/assets/img/soundcloud.png"), rgb(0, 0, 0);
   background-size: cover;
@@ -2975,16 +3015,15 @@ section,
 }
 @media screen and (max-width: 768px) {
   .price-container-soundcloud {
-    height: 130px; /* מגדיל את גובה הקונטיינר */
+    height: 100px; /* מגדיל את גובה הקונטיינר */
     background-size: 250%; /* מגדיל את התמונה */
   }
 }
-
 .price-item .price-top-soundcloud:after {
   height: 50px;
   width: 100%;
   border-radius: 0 0 10px 10px;
-  background: linear-gradient(0deg, rgb(255, 105, 0), rgb(0, 0, 0));
+  background: linear-gradient(0deg, var(--soundcloud_color), rgb(0, 0, 0));
   position: absolute;
   content: "";
   left: 0;
@@ -2996,7 +3035,7 @@ section,
   box-shadow: 0 5px 10px 0 rgba(113, 113, 113, 0.15);
 }
 .btn-soundcloud {
-  background-color: rgb(255, 105, 0);
+  background-color: var(--soundcloud_color);
   color: var(--contrast-color);
   border-radius: 20px;
   font-weight: 500;
@@ -3008,6 +3047,21 @@ section,
   background-color: black;
   color: white;
 }
+#soundcloud .price-item {
+  border: solid 0.1px var(--soundcloud_color);
+}
+.soundcloud-card-hight {
+  height: 510px;
+}
+@media (max-width: 768px) {
+  .soundcloud-card-hight {
+    height: auto;
+  }
+}
+#soundcloud .bi-soundwave{
+  color: #000000;
+}
+/* עיצוב כרטיס נטפליקס */
 .price-container-netflix {
   background: url("/assets/img/net.png"), rgb(0, 0, 0);
   background-size: cover;
@@ -3022,16 +3076,15 @@ section,
 }
 @media screen and (max-width: 768px) {
   .price-container-netflix {
-    height: 130px; /* מגדיל את גובה הקונטיינר */
+    height: 100px; /* מגדיל את גובה הקונטיינר */
     background-size: 250%; /* מגדיל את התמונה */
   }
 }
-
 .price-item .price-top-netflix:after {
   height: 50px;
   width: 100%;
   border-radius: 0 0 10px 10px;
-  background: linear-gradient(0deg, rgb(255, 0, 0), rgb(0, 0, 0));
+  background: linear-gradient(0deg, var(--netflix-color), rgb(0, 0, 0));
   position: absolute;
   content: "";
   left: 0;
@@ -3043,7 +3096,7 @@ section,
   box-shadow: 0 5px 10px 0 rgba(113, 113, 113, 0.15);
 }
 .btn-netflix {
-  background-color: rgb(255, 0, 0);
+  background-color: var(--netflix-color);
   color: var(--contrast-color);
   border-radius: 20px;
   font-weight: 500;
@@ -3055,6 +3108,18 @@ section,
   background-color: black;
   color: white;
 }
+#netflix .price-item {
+  border: solid 0.1px var(--netflix-color);
+}
+#netflix .bi-cast{
+  color: #000000;
+}
+#netflix .bi-badge-4k{
+  color: #000000;
+}
+#netflix .bi-badge-hd{
+  color: #000000;
+}
 /* <!-- /youtube premium --> */
 .youtube-premium {
   background-color: rgb(0, 0, 0);
@@ -3065,24 +3130,7 @@ section,
 .netflix-card-hight {
   height: 380px;
 }
-.yt-head {
-  color: red;
-}
-.yt-order-btn {
-  background-color: red;
-  border-color: white;
-  color: var(--contrast-color);
-  /* padding: 0.75rem 2.5rem; */
-  border-radius: 20px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  width: 200px;
-  height: 40px;
-}
-.yt-order-btn:hover {
-  background-color: white;
-  color: black;
-}
+
 /* Ensure list is in RTL mode */
 .feature-list {
   list-style: none;
