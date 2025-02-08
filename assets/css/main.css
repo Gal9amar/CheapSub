@@ -163,8 +163,9 @@ h6 {
 
 .header .btn-getstarted,
 .header .btn-getstarted:focus {
+  border: solid 1px black;
   color: var(--contrast-color);
-  background: rgb(45, 202, 45);
+  background: rgb(15, 177, 15);
   font-size: 14px;
   padding: 8px 20px;
   margin: 0 0 0 30px;
@@ -175,7 +176,7 @@ h6 {
 .header .btn-getstarted:hover,
 .header .btn-getstarted:focus:hover {
   color: var(--contrast-color);
-  background: color-mix(in srgb, var(--accent-color), transparent 15%);
+  background: color-mix(in srgb, black, transparent 15%);
 }
 
 @media (max-width: 1200px) {
@@ -2749,7 +2750,7 @@ section,
 }
 .dropdown-item:hover {
   background: var(--accent-color);
-  color: white;
+  color: white !important;
 }
 .dropdown:hover .dropdown-menu {
   display: block;

@@ -17,7 +17,8 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="/assets/css/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/navbar.css">
   <!-- Structured Data (Schema Markup) -->
   <script type="application/ld+json">
     {
@@ -36,33 +37,33 @@
 </head>
 
 <body class="index-page">
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-      <a class="btn-getstarted" href="javascript:void(0);" onclick="sendWhatsAppMessageGuide()" aria-label="שלח הודעה בוואטסאפ">שלח הודעה</a>
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li>
-            <div class="dropdown">
-              <button class="dropdown-toggle" type="button" id="dropdownMenuButton">
-                מדריכים
-              </button>
-              <div class="dropdown-menu">
-                <a onclick="promptPassword('dynamic-content-1', 'google-guide.html', event)" class="dropdown-item" href="#dynamic-content-1">גוגל</a>
-                <a onclick="promptPassword('dynamic-content-2', 'netflix-guide.html', event)" class="dropdown-item" href="#dynamic-content-2">נטפליקס</a>
-              </div>
-            </div>
-          </li>
-          <li><a href="#spotify-premium" tabindex="0">Spotify</a></li>
-          <li><a href="#playstation-plus" tabindex="0">PlayStation</a></li>
-          <li><a href="#google-one" tabindex="0">Google One</a></li>
-          <li><a href="#youtube-premium" tabindex="0">YouTube</a></li>
-          <li><a href="#soundcloud" tabindex="0">SoundCloud</a></li>
-          <li><a href="#netflix" tabindex="0">Netflix</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list" aria-label="תפריט ניווט"></i>
-      </nav>
-    </div>
-  </header>
+<header id="header" class="header d-flex align-items-center fixed-top">
+  <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+    <button class="btn-getstarted" onclick="sendWhatsAppMessageGuide()" aria-label="שלח הודעה בוואטסאפ">שלח הודעה</button>
+    <nav id="navmenu" class="navmenu" role="navigation">
+      <ul>
+        <li>
+        </li>
+        <li><a href="#spotify-premium" tabindex="0">Spotify</a></li>
+        <li><a href="#playstation-plus" tabindex="0">PlayStation</a></li>
+        <li><a href="#google-one" tabindex="0">Google One</a></li>
+        <li><a href="#youtube-premium" tabindex="0">YouTube</a></li>
+        <li><a href="#soundcloud" tabindex="0">SoundCloud</a></li>
+        <li><a href="#netflix" tabindex="0">Netflix</a></li>
+        <div class="dropdown">
+          <button class="dropdown-toggle" type="button" id="dropdownMenuButton" aria-expanded="false" aria-controls="dropdownMenu">
+            מדריכים
+          </button>
+          <div class="dropdown-menu" id="dropdownMenu">
+            <a onclick="promptPassword('dynamic-content-1', 'google-guide.html', event)" class="dropdown-item" href="#dynamic-content-1">גוגל</a>
+            <a onclick="promptPassword('dynamic-content-2', 'netflix-guide.html', event)" class="dropdown-item" href="#dynamic-content-2">נטפליקס</a>
+          </div>
+        </div>
+      </ul>
+      <i class="mobile-nav-toggle d-xl-none bi bi-list" role="button" tabindex="0" aria-label="תפריט ניווט"></i>
+    </nav>
+  </div>
+</header>
   <main class="main">
 
     <!-- Hero Section -->
@@ -91,53 +92,7 @@
             </div>
           </div>
         </div>
-        <div class="row stats-row">
-          <div class="stat-item">
-            <div class="stat-icon">
-              <i class="bi bi-tv"></i>
-            </div>
-            <div class="stat-content">
-              <h4>Netflix</h4>
-              <p class="mb-0">16₪ בחודש למסלול 4K</p>
-            </div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-icon">
-              <i class="bi bi-music-note-list"></i>
-            </div>
-            <div class="stat-content">
-              <h4>Spotify</h4>
-              <p class="mb-0">מסלול פרימיום יחיד רק 90₪ לשנה</p>
-            </div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-icon">
-              <i class="bi bi-google"></i>
-            </div>
-            <div class="stat-content">
-              <h4>Google One</h4>
-              <p class="mb-0">מסלולי גיבוי 100GB או 2TB</p>
-            </div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-icon">
-              <i class="bi bi-youtube"></i>
-            </div>
-            <div class="stat-content">
-              <h4>YouTube</h4>
-              <p class="mb-0">מסלול פרימיום יחיד 130₪ לשנה</p>
-            </div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-icon">
-              <i class="bi bi-controller"></i>
-            </div>
-            <div class="stat-content">
-              <h4>PlayStation Plus</h4>
-              <p class="mb-0">במגוון מסלולים מוזלים</p>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </section><!-- /Hero Section -->
 
@@ -145,18 +100,10 @@
     <section id="about" class="about section">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-4 align-items-center justify-content-between">
-          <div class="col-xl-5" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-xl-12" data-aos="fade-up" data-aos-delay="200">
             <span class="about-meta">איך זה עובד?</span>
             <h2 class="about-title">ניצול מחירים מוזלים של מדינות שונות</h2>
             <p class="about-description">רבים מהשירותים הדיגיטליים הקיימים כיום מאפשרים ליהנות מתוכן זהה בעלויות נמוכות משמעותית במדינות שונות. לדוגמה, מנוי Netflix Premium שעולה בישראל כ-70 ש"ח, זמין בניגריה במחיר של כ-16 ש"ח בלבד – אותו השירות, ללא חסימת IP וללא פשרות על השפה העברית. עם זאת, חלק מהשירותים דורשים שימוש בכרטיס אשראי מקומי לצורך ההרשמה. כאן אנחנו נכנסים לתמונה, ומציעים לכם פתרון פשוט ומשתלם, תוך דאגה לרכישה במחירים המוזלים ביותר.
-          </div>
-          <div class="col-xl-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="image-wrapper">
-              <div class="images position-relative" data-aos="zoom-out" data-aos-delay="400">
-                <img src="assets/img/3a5047c2-96d2-40e8-a447-ca247b88f3ce.webp" alt="Business Meeting" class="img-fluid main-image rounded-4 hide-on-mobile">
-                <!-- <img src="assets/img/IMG-20241107-WA0005.jpg" alt="Team Discussion" class="img-fluid small-image rounded-4 hide-on-mobile"> -->
-              </div>
-            </div>
           </div>
         </div>
       </div>
