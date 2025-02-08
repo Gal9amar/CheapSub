@@ -2502,8 +2502,8 @@ section,
 }
 
 .price-item .price-content {
-  padding: 30px;
-  padding-bottom: 40px;
+  padding: 10px;
+  /* padding-bottom: 40px; */
 }
 
 .price-item .price-content li {
@@ -3008,12 +3008,62 @@ section,
   background-color: black;
   color: white;
 }
+.price-container-netflix {
+  background: url("/assets/img/net.png"), rgb(0, 0, 0);
+  background-size: cover;
+  height: 130px;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #000000;
+  /* padding: 20px 30px; */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .price-container-netflix {
+    height: 130px; /* מגדיל את גובה הקונטיינר */
+    background-size: 250%; /* מגדיל את התמונה */
+  }
+}
+
+.price-item .price-top-netflix:after {
+  height: 50px;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+  background: linear-gradient(0deg, rgb(255, 0, 0), rgb(0, 0, 0));
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -17px;
+  z-index: -1;
+  -webkit-transform: skewY(5deg);
+  transform: skewY(5deg);
+  -webkit-box-shadow: 0 5px 10px 0 rgba(113, 113, 113, 0.15);
+  box-shadow: 0 5px 10px 0 rgba(113, 113, 113, 0.15);
+}
+.btn-netflix {
+  background-color: rgb(255, 0, 0);
+  color: var(--contrast-color);
+  border-radius: 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  width: 200px;
+  height: 40px;
+}
+.btn-netflix:hover {
+  background-color: black;
+  color: white;
+}
 /* <!-- /youtube premium --> */
 .youtube-premium {
   background-color: rgb(0, 0, 0);
   border-radius: 15px;
   color: white;
   padding: 20px 20px 20px 20px;
+}
+.netflix-card-hight {
+  height: 380px;
 }
 .yt-head {
   color: red;
