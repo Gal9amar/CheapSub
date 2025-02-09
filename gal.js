@@ -63,7 +63,7 @@ function closeContent(contentId) {
 }
 function sendWhatsAppMessageGuide() {
   const phoneNumber = "+972529070000"; // מספר הטלפון שלך
-  const message = "שלום, אני רוצה לקבל את הסיסמה לצפייה במדריך.";
+  const message = "שלום , זו פניה מהאתר בנושא:";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   window.open(whatsappUrl, "_blank");
   closePasswordPopup();
