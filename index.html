@@ -37,35 +37,30 @@
 </head>
 
 <body class="index-page">
-<header id="header" class="header d-flex align-items-center fixed-top">
-  <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-    <button class="btn-getstarted" onclick="sendWhatsAppMessageGuide()" aria-label="שלח הודעה בוואטסאפ"><i class="bi bi-whatsapp"></i> </button>
-    <nav id="navmenu" class="navmenu" role="navigation">
-      <ul>
-        <li>
-        </li>
-        <li><a href="#spotify-premium" tabindex="0">Spotify</a></li>
-        <li><a href="#playstation-plus" tabindex="0">PlayStation</a></li>
-        <li><a href="#google-one" tabindex="0">Google One</a></li>
-        <li><a href="#youtube-premium" tabindex="0">YouTube</a></li>
-        <li><a href="#soundcloud" tabindex="0">SoundCloud</a></li>
-        <li><a href="#netflix" tabindex="0">Netflix</a></li>
-        <div class="dropdown">
-          <button class="dropdown-toggle" type="button" id="dropdownMenuButton" aria-expanded="false" aria-controls="dropdownMenu">
-            מדריכים
-          </button>
-          <div class="dropdown-menu" id="dropdownMenu">
-            <a onclick="promptPassword('dynamic-content-1', 'google-guide.html', event)" class="dropdown-item" href="#dynamic-content-1">גוגל</a>
-            <a onclick="promptPassword('dynamic-content-2', 'netflix-guide.html', event)" class="dropdown-item" href="#dynamic-content-2">נטפליקס</a>
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <button class="btn-getstarted" onclick="sendWhatsAppMessageGuide()" aria-label="שלח הודעה בוואטסאפ"><i class="bi bi-whatsapp"></i> </button>
+      <nav id="navmenu" class="navmenu" role="navigation">
+        <ul>
+          <li>
+          </li>
+          <li><a href="#spotify-premium" tabindex="0">Spotify</a></li>
+          <li><a href="#playstation-plus" tabindex="0">PlayStation</a></li>
+          <li><a href="#google-one" tabindex="0">Google One</a></li>
+          <li><a href="#youtube-premium" tabindex="0">YouTube</a></li>
+          <li><a href="#soundcloud" tabindex="0">SoundCloud</a></li>
+          <li><a href="#netflix" tabindex="0">Netflix</a></li>
+          <hr>
+          <li><a onclick="promptPassword('dynamic-content-1', 'google-guide.html', event)" href="#dynamic-content-1">מדריך גוגל</a></li>
+          <li><a onclick="promptPassword('dynamic-content-2', 'netflix-guide.html', event)" href="#dynamic-content-2">מדריך נטפליקס</a></li>
+          <div class="dropdown">
           </div>
-        </div>
-      </ul>
-      <i class="mobile-nav-toggle d-xl-none bi bi-list" role="button" tabindex="0" aria-label="תפריט ניווט"></i>
-    </nav>
-  </div>
-</header>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list" role="button" tabindex="0" aria-label="תפריט ניווט"></i>
+      </nav>
+    </div>
+  </header>
   <main class="main">
-
     <!-- Hero Section -->
     <section id="hero" class="hero section">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -92,7 +87,7 @@
             </div>
           </div>
         </div>
-        
+
       </div>
     </section><!-- /Hero Section -->
 
