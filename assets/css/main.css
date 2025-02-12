@@ -257,7 +257,7 @@ h6 {
   .navmenu .active:focus {
     color: var(--nav-hover-color);
   }
-/* 
+  /* 
   .navmenu .dropdown ul {
     margin: 0;
     padding: 10px 0;
@@ -346,14 +346,14 @@ h6 {
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
   }
 
-.navmenu {
+  .navmenu {
     display: flex;
     justify-content: center; /* מרכז את כל הקישורים */
     align-items: center;
-}
+  }
 
-.navmenu a,
-.navmenu a:focus {
+  .navmenu a,
+  .navmenu a:focus {
     color: var(--nav-dropdown-color);
     padding: 10px 20px;
     font-family: var(--nav-font);
@@ -365,8 +365,7 @@ h6 {
     white-space: nowrap;
     transition: 0.3s;
     text-align: center;
-}
-
+  }
 
   /* .navmenu a i,
   .navmenu a:focus i {
@@ -393,10 +392,10 @@ h6 {
   .navmenu .active,
   .navmenu .active:focus {
     /* border-radius: 25px; */
-    background-color:var(--nav-dropdown-hover-color);
+    background-color: var(--nav-dropdown-hover-color);
     color: white;
   }
-/* 
+  /* 
   .navmenu .active i,
   .navmenu .active:focus i {
     background-color: var(--accent-color);
@@ -2422,7 +2421,7 @@ section,
   background-color: #fff;
   -webkit-box-shadow: 0 5px 30px 0 rgba(39, 39, 39, 0.15);
   box-shadow: 0 5px 30px 0 rgba(39, 39, 39, 0.15);
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 @media (min-width: 768px) {
@@ -2825,7 +2824,7 @@ section,
 #spotify-premium .price-item {
   border: solid 0.1px var(--spotify_color);
 }
-#spotify-premium .bi-spotify{
+#spotify-premium .bi-spotify {
   color: #000000;
 }
 .spotify-card-hight {
@@ -2894,7 +2893,7 @@ section,
     height: auto;
   }
 }
-#playstation-plus .bi-playstation{
+#playstation-plus .bi-playstation {
   color: #000000;
 }
 /* עיצוב כרטיס גוגל */
@@ -2955,7 +2954,7 @@ section,
     height: auto;
   }
 }
-#google-one .bi-google{
+#google-one .bi-google {
   color: #000000;
 }
 /* עיצוב כרטיס יוטיוב */
@@ -3016,7 +3015,7 @@ section,
     height: auto;
   }
 }
-#youtube-premium .bi-youtube{
+#youtube-premium .bi-youtube {
   color: #000000;
 }
 /* עיצוב כרטיס soundcloud */
@@ -3077,7 +3076,7 @@ section,
     height: auto;
   }
 }
-#soundcloud .bi-soundwave{
+#soundcloud .bi-soundwave {
   color: #000000;
 }
 /* עיצוב כרטיס נטפליקס */
@@ -3130,13 +3129,13 @@ section,
 #netflix .price-item {
   border: solid 0.1px var(--netflix-color);
 }
-#netflix .bi-cast{
+#netflix .bi-cast {
   color: #000000;
 }
-#netflix .bi-badge-4k{
+#netflix .bi-badge-4k {
   color: #000000;
 }
-#netflix .bi-badge-hd{
+#netflix .bi-badge-hd {
   color: #000000;
 }
 .netflix-card-hight {
@@ -3147,7 +3146,6 @@ section,
     height: auto;
   }
 }
-
 
 /* Ensure list is in RTL mode */
 .feature-list {
@@ -3192,3 +3190,53 @@ section,
     font-size: 18px;
   }
 }
+@media (max-width: 768px) {
+  .card-wide-mobile > * {
+    width: 80%;
+  }
+
+  .price-top {
+    width: 110%;
+    left: 15px;
+    margin: 0 auto; /* ממרכז את התוכן בתוך האלמנט */
+    text-align: center; /* ממרכז את הטקסט בתוך האלמנט */
+  }
+}
+
+
+.price-item {
+    border: 2px solid #ccc; /* גבול רגיל */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* לא לשנות גבול */
+}
+
+.card-hover-spotify:hover {
+    transform: translateY(-10px);  /* הזזה קלה למעלה */
+    box-shadow: 0 4px 20px var(--spotify_color);  /* הוספת צל */
+    /* אין שינוי בגבול */
+}
+.card-hover-playstation:hover {
+    transform: translateY(-10px);  /* הזזה קלה למעלה */
+    box-shadow: 0 4px 20px var(--playstation_color);  /* הוספת צל */
+    /* אין שינוי בגבול */
+}
+.card-hover-google:hover {
+    transform: translateY(-10px);  /* הזזה קלה למעלה */
+    box-shadow: 0 4px 20px var(--google_color);  /* הוספת צל */
+    /* אין שינוי בגבול */
+}
+.card-hover-youtube:hover {
+    transform: translateY(-10px);  /* הזזה קלה למעלה */
+    box-shadow: 0 4px 20px var(--youtube_color);  /* הוספת צל */
+    /* אין שינוי בגבול */
+}
+.card-hover-soundcloud:hover {
+    transform: translateY(-10px);  /* הזזה קלה למעלה */
+    box-shadow: 0 4px 20px var(--soundcloud_color);  /* הוספת צל */
+    /* אין שינוי בגבול */
+}
+.card-hover-netflix:hover {
+    transform: translateY(-10px);  /* הזזה קלה למעלה */
+    box-shadow: 0 4px 20px var(--netflix-color);  /* הוספת צל */
+    /* אין שינוי בגבול */
+}
+
