@@ -3197,7 +3197,7 @@ section,
 
   .price-top {
     width: 110%;
-    left: 15px;
+    left: 14px;
     margin: 0 auto; /* ממרכז את התוכן בתוך האלמנט */
     text-align: center; /* ממרכז את הטקסט בתוך האלמנט */
   }
