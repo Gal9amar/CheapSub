@@ -1,4 +1,3 @@
-// הגדרת משתנה הסיסמה
 const correctPassword = "2025"; // סיסמה נכונה
 
 function promptPassword(contentId, url, event) {
@@ -12,16 +11,16 @@ function promptPassword(contentId, url, event) {
     showCancelButton: true,
     confirmButtonText: "אישור",
     cancelButtonText: "ביטול",
-    showDenyButton: true, // הוספת כפתור נוסף
-    denyButtonText: "בקש סיסמה", // טקסט הכפתור
+    showDenyButton: true, // כפתור נוסף
+    denyButtonText: "בקש סיסמה",
     inputAttributes: {
       autocapitalize: "off",
     },
     customClass: {
-      actions: "my-actions", // כיתה מותאמת לאזור הכפתורים
-      cancelButton: "order-2", // כפתור ביטול עם סדר והוספת רווח מימין
-      confirmButton: "order-1 right-gap", // כפתור אישור
-      denyButton: "order-3", // כפתור סרב
+      actions: "my-actions",
+      cancelButton: "order-2",
+      confirmButton: "order-1 right-gap",
+      denyButton: "order-3",
     },
     preConfirm: (password) => {
       if (password === correctPassword) {
@@ -33,16 +32,53 @@ function promptPassword(contentId, url, event) {
     },
   }).then((result) => {
     if (result.isDenied) {
-      sendWhatsAppMessageGuide(); // קריאה לשליחת הודעה לוואטסאפ אם המשתמש לוחץ על "בקש סיסמה"
+      sendWhatsAppMessageGuide();
     }
   });
 }
 
+// פונקציה לטעינת התוכן
+function loadContent(contentId, url) {
+  const contentArea = document.getElementById(contentId);
+
+  // הצגת הודעת טעינה
+  contentArea.innerHTML = "<p>טוען תוכן...</p>";
+
+  // טעינת התוכן מהקובץ החיצוני
+  fetch(url)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("שגיאה בטעינת התוכן");
+      }
+      return response.text();
+    })
+    .then((data) => {
+      contentArea.innerHTML = `
+        <button class="close-button" onclick="closeContent('${contentId}')">סגירה</button>
+        ${data}
+      `;
+
+      // ✅ הוספת גלילה אוטומטית לאחר טעינת התוכן
+      setTimeout(() => {
+        contentArea.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 200); // עיכוב קל כדי לאפשר לתוכן להיטען
+    })
+    .catch((error) => {
+      contentArea.innerHTML = `<p>שגיאה בטעינה: ${error.message}</p>`;
+    });
+}
+
+// פונקציה לשליחת הודעה לוואטסאפ
 function sendWhatsAppMessageGuide() {
-  const phoneNumber = "+972529070000"; // מספר הטלפון שלך
+  const phoneNumber = "+972529070000";
   const message = "שלום , זו פניה מהאתר בנושא:";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   window.open(whatsappUrl, "_blank");
+}
+
+// פונקציה לסגירת התוכן
+function closeContent(contentId) {
+  document.getElementById(contentId).innerHTML = "";
 }
 
 // הוספת CSS מותאם אישית לכפתורים
@@ -50,22 +86,22 @@ const style = document.createElement("style");
 style.innerHTML = `
   .my-actions {
     display: flex;
-    justify-content: space-between;  /* מיקום הכפתורים בצורה מאוזנת */
+    justify-content: space-between;
   }
   .order-1 {
-    background-color: #4CAF50; /* צבע אדום לכפתור ביטול */
+    background-color:  #4CAF50; /* ירוק */
     color: white;
   }
   .order-2 {
-    background-color: #f44336; /* צבע ירוק לכפתור אישור */
+    background-color: #f44336; /* אדום */
     color: white;
   }
   .order-3 {
-    background-color: #9C27B0; /* צבע סגול לכפתור סרב */
+    background-color: #2196F3; /* כחול */
     color: white;
   }
   .right-gap {
-    margin-right: 10px; /* רווח בין כפתור הביטול לכפתור אישור */
+    margin-right: 10px;
   }
 `;
 document.head.appendChild(style);
@@ -88,5 +124,3 @@ function sendWhatsAppMessageBuy(productName, productPrice, productDescription) {
   window.open(whatsappUrl, "_blank");
   closePasswordPopup();
 }
-
-
