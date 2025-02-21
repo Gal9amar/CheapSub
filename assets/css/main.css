@@ -2521,14 +2521,14 @@ section,
   }
 }
 
-.price-item .price-content {
-  padding: 10px;
-  /* padding-bottom: 40px; */
-}
+/* .price-item .price-content {
+  padding: 10px; 
+  padding-bottom: 40px;
+} */
 
 .price-item .price-content li {
   position: relative;
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
   margin-left: 10px;
   margin-right: 10px;
   text-align: center;
@@ -2860,8 +2860,10 @@ section,
 @media (max-width: 768px) {
   .spotify-card-hight {
     height: auto;
+    min-height: 300px; /* ניתן לשנות את הערך בהתאם לצורך */
   }
 }
+
 /* playstation card design */
 .price-container-playstation {
   background: url("/assets/img/psplus.jpg"), rgb(0, 0, 0);
@@ -2913,11 +2915,12 @@ section,
   border: solid 0.1px var(--playstation_color);
 }
 .playstation-card-hight {
-  height: 470px;
+  height: 410px;
 }
 @media (max-width: 768px) {
   .playstation-card-hight {
     height: auto;
+        min-height: 300px; /* ניתן לשנות את הערך בהתאם לצורך */
   }
 }
 #playstation-plus .bi-playstation {
@@ -2979,6 +2982,7 @@ section,
 @media (max-width: 768px) {
   .google-card-hight {
     height: auto;
+        min-height: 300px; /* ניתן לשנות את הערך בהתאם לצורך */
   }
 }
 #google-one .bi-google {
@@ -3040,6 +3044,7 @@ section,
 @media (max-width: 768px) {
   .youtube-card-hight {
     height: auto;
+        min-height: 300px; /* ניתן לשנות את הערך בהתאם לצורך */
   }
 }
 #youtube-premium .bi-youtube {
@@ -3096,11 +3101,12 @@ section,
   border: solid 0.1px var(--soundcloud_color);
 }
 .soundcloud-card-hight {
-  height: 440px;
+  height: 400px;
 }
 @media (max-width: 768px) {
   .soundcloud-card-hight {
     height: auto;
+        min-height: 300px; /* ניתן לשנות את הערך בהתאם לצורך */
   }
 }
 #soundcloud .bi-soundwave {
@@ -3171,6 +3177,7 @@ section,
 @media (max-width: 768px) {
   .netflix-card-hight {
     height: auto;
+        min-height: 300px; /* ניתן לשנות את הערך בהתאם לצורך */
   }
 }
 
@@ -3219,7 +3226,7 @@ section,
 }
 @media (max-width: 768px) {
   .card-wide-mobile > * {
-    width: 80%;
+    width: 70%;
   }
 
   .price-top {
