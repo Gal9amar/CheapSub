@@ -2458,7 +2458,7 @@ section,
   box-shadow: 0 5px 30px 0 rgba(39, 39, 39, 0.15);
   padding: 30px 0 25px;
   background: black;
-  top: -21px;
+  top: -25px;
   border-radius: 10px;
   position: relative;
   z-index: 0;
@@ -2473,7 +2473,7 @@ section,
 }
 @media (max-width: 768px) {
   .price-item .price-top {
-  top: -1px;
+    top: -5px;
   }
 }
 
@@ -2849,7 +2849,7 @@ section,
   color: white;
 }
 #spotify-premium .price-item {
-  border: solid 0.1px var(--spotify_color);
+  border: solid 2px var(--spotify_color);
 }
 #spotify-premium .bi-spotify {
   color: #000000;
@@ -2912,7 +2912,7 @@ section,
   color: white;
 }
 #playstation-plus .price-item {
-  border: solid 0.1px var(--playstation_color);
+  border: solid 2px var(--playstation_color);
 }
 .playstation-card-hight {
   height: 410px;
@@ -2974,7 +2974,7 @@ section,
   color: white;
 }
 #google-one .price-item {
-  border: solid 0.1px var(--google_color);
+  border: solid 2px var(--google_color);
 }
 .google-card-hight {
   height: 350px;
@@ -3036,7 +3036,7 @@ section,
   color: white;
 }
 #youtube-premium .price-item {
-  border: solid 0.1px var(--youtube_color);
+  border: solid 2px var(--youtube_color);
 }
 .youtube-card-hight {
   height: 350px;
@@ -3098,7 +3098,7 @@ section,
   color: white;
 }
 #soundcloud .price-item {
-  border: solid 0.1px var(--soundcloud_color);
+  border: solid 2px var(--soundcloud_color);
 }
 .soundcloud-card-hight {
   height: 400px;
@@ -3160,7 +3160,7 @@ section,
   color: white;
 }
 #netflix .price-item {
-  border: solid 0.1px var(--netflix-color);
+  border: solid 2px var(--netflix-color);
 }
 #netflix .bi-cast {
   color: #000000;
@@ -3180,6 +3180,157 @@ section,
         min-height: 300px; /* ניתן לשנות את הערך בהתאם לצורך */
   }
 }
+
+/* ************************************************ */
+/* תחילת עיצוב לכרטיס חדש */
+
+/* עיצוב כרטיס CANVA */
+:root {
+  --canva_color: rgb(141, 8, 250);
+}
+.price-container-canva {
+  background: url("/assets/img/canva.png"), rgb(0, 0, 0);
+  background-size: cover;
+  height: 130px;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #000000;
+  /* padding: 20px 30px; */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .price-container-canva {
+    height: 100px; /* מגדיל את גובה הקונטיינר */
+    background-size: 250%; /* מגדיל את התמונה */
+  }
+}
+.price-item .price-top-canva:after {
+  height: 50px;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+  background: linear-gradient(0deg, var(--canva_color), rgb(0, 0, 0));
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -17px;
+  z-index: -1;
+  -webkit-transform: skewY(5deg);
+  transform: skewY(5deg);
+  -webkit-box-shadow: 0 5px 10px 0 rgba(113, 113, 113, 0.15);
+  box-shadow: 0 5px 10px 0 rgba(113, 113, 113, 0.15);
+}
+.btn-canva {
+  background-color: var(--canva_color);
+  color: var(--contrast-color);
+  border-radius: 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  width: 200px;
+  height: 40px;
+}
+.btn-canva:hover {
+  background-color: black;
+  color: white;
+}
+#canva .price-item {
+  border: solid 2px var(--canva_color);
+}
+.canva-card-hight {
+  height: 400px;
+}
+@media (max-width: 768px) {
+  .canva-card-hight {
+    height: auto;
+        min-height: 300px; /* ניתן לשנות את הערך בהתאם לצורך */
+  }
+}
+#canvaicon .bi-palette {
+  color: #000000;
+}
+.card-hover-canva:hover {
+  transform: translateY(-10px); /* הזזה קלה למעלה */
+  box-shadow: 0 4px 20px var(--canva_color); /* הוספת צל */
+  /* אין שינוי בגבול */
+}
+/* סוף עיצוב לכרטיס חדש */
+/* ************************************************ */
+/* ************************************************ */
+/* תחילת עיצוב לכרטיס חדש */
+
+/* עיצוב כרטיס ME-APP */
+:root {
+  --me-app_color: rgb(8, 113, 250);
+}
+.price-container-me-app {
+  background: url("/assets/img/me-app.png"), rgb(0, 0, 0);
+  background-size: cover;
+  height: 130px;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #000000;
+  /* padding: 20px 30px; */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .price-container-me-app {
+    height: 100px; /* מגדיל את גובה הקונטיינר */
+    background-size: 250%; /* מגדיל את התמונה */
+  }
+}
+.price-item .price-top-me-app:after {
+  height: 50px;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+  background: linear-gradient(0deg, var(--me-app_color), rgb(0, 0, 0));
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -17px;
+  z-index: -1;
+  -webkit-transform: skewY(5deg);
+  transform: skewY(5deg);
+  -webkit-box-shadow: 0 5px 10px 0 rgba(113, 113, 113, 0.15);
+  box-shadow: 0 5px 10px 0 rgba(113, 113, 113, 0.15);
+}
+.btn-me-app {
+  background-color: var(--me-app_color);
+  color: var(--contrast-color);
+  border-radius: 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  width: 200px;
+  height: 40px;
+}
+.btn-me-app:hover {
+  background-color: black;
+  color: white;
+}
+#meapp .price-item {
+  border: solid 2px var(--me-app_color);
+}
+.me-app-card-hight {
+  height: 400px;
+}
+@media (max-width: 768px) {
+  .me-app-card-hight {
+    height: auto;
+        min-height: 300px; /* ניתן לשנות את הערך בהתאם לצורך */
+  }
+}
+#me-appicon .bi-phone {
+  color: #000000;
+}
+.card-hover-me-app:hover {
+  transform: translateY(-10px); /* הזזה קלה למעלה */
+  box-shadow: 0 4px 20px var(--me-app_color); /* הוספת צל */
+  /* אין שינוי בגבול */
+}
+/* סוף עיצוב לכרטיס חדש */
+/* ************************************************ */
 
 /* Ensure list is in RTL mode */
 .feature-list {
@@ -3226,12 +3377,12 @@ section,
 }
 @media (max-width: 768px) {
   .card-wide-mobile > * {
-    width: 80%;
+    width: 75%;
   }
 
   .price-top {
     width: 110%;
-    left: 14px;
+    left: 5%;
     margin: 0 auto; /* ממרכז את התוכן בתוך האלמנט */
     text-align: center; /* ממרכז את הטקסט בתוך האלמנט */
   }
@@ -3271,4 +3422,16 @@ section,
   transform: translateY(-10px); /* הזזה קלה למעלה */
   box-shadow: 0 4px 20px var(--netflix-color); /* הוספת צל */
   /* אין שינוי בגבול */
+}
+
+.coming-soon-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0) !important;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 10px;
+  z-index: 10;
 }
