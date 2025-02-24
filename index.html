@@ -22,6 +22,8 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="/assets/css/main.css" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/navbar.css">
+  <link rel="stylesheet" href="/assets/css/timer.css">
+  <script src="/assets/js/timer.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <!-- Structured Data (Schema Markup) -->
@@ -235,6 +237,27 @@
           <!-- Section Title -->
           <div class="container section-title" data-aos="fade-up">
             <h3>משתמש חדש עם מנוי לשנה בהתאם למסלול שתבחרו</h3>
+            <div class="timer-container">
+              <h2>המבצע נגמר בעוד:</h2>
+              <div class="countdown">
+                <div class="time-box">
+                  <span id="seconds">00</span>
+                  <small>שניות</small>
+                </div>
+                <div class="time-box">
+                  <span id="minutes">00</span>
+                  <small>דקות</small>
+                </div>
+                <div class="time-box">
+                  <span id="hours">00</span>
+                  <small>שעות</small>
+                </div>
+                <div class="time-box">
+                  <span id="days">00</span>
+                  <small>ימים</small>
+                </div>
+              </div>
+            </div>
           </div><!-- End Section Title -->
           <div class="tab-content wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
             <div role="tabpanel" class="tab-pane fade show active" id="monthly">
@@ -267,12 +290,14 @@
                   <br>
                   <div class="price-item text-center card-hover-playstation ">
                     <div class="price-top price-top-playstation">
-                      <span class="coming-soon-tag">מבצע עד 26.2</span> <br>
+                      <span class="coming-soon-tag">מבצע לזמן מוגבל</span> <br>
                       <h4>מנוי לשנה Extra</h4>
-                      <h2 class="mb-0"><sup>₪</sup>25 <span class="month">לחודש</span></h2>
+                      <!-- <h2 class="mb-0"><sup>₪</sup>25 <span class="month">לחודש</span></h2> -->
+                      <h2 class="mb-0"><sup>₪</sup>230 <span class="month"></span></h2>
                       <span class="text-capitalize text-decoration-line-through">תשלום חד פעמי של ₪300</span> <br>
-                      <span class="text-capitalize">תשלום חד פעמי של ₪230</span>
-                      <br><span>במקום</span>
+                      <!-- <span class="text-capitalize">תשלום חד פעמי של ₪230</span> -->
+                      <!-- <br> -->
+                      <span>במקום</span>
                       <span>₪540</span>
                     </div>
                     <div class="price-content marg">
@@ -299,10 +324,12 @@
                     <div class="price-top price-top-playstation">
                       <span class="coming-soon-tag">מבצע עד 26.2</span> <br>
                       <h4>מנוי לשנה Deluxe</h4>
-                      <h2 class="mb-0"><sup>₪</sup>29.16 <span class="month">לחודש</span></h2>
+                      <h2 class="mb-0"><sup>₪</sup>235 <span class="month"></span></h2>
+                      <!-- <h2 class="mb-0"><sup>₪</sup>29.16 <span class="month">לחודש</span></h2> -->
                       <span class="text-capitalize text-decoration-line-through">תשלום חד פעמי של ₪350</span> <br>
-                      <span class="text-capitalize">תשלום חד פעמי של ₪235</span>
-                      <br><span>במקום</span>
+                      <!-- <span class="text-capitalize">תשלום חד פעמי של ₪235</span> -->
+                      <!-- <br> -->
+                      <span>במקום</span>
                       <span>₪635</span>
                     </div>
                     <div class="price-content marg">
@@ -713,7 +740,21 @@
                   </div>
                 </div>
                 <div id="meapp" class="col-md-6 col-lg-4 mb-30 ">
+                  <!DOCTYPE html>
+                  <html lang="he">
 
+                  <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>טיימר ספירה לאחור</title>
+                    <link rel="stylesheet" href="styles.css">
+                  </head>
+
+                  <body>
+                    <script src="script.js"></script>
+                  </body>
+
+                  </html>
                   <br>
                   <div class="price-item text-center card-hover-me-app">
                     <div class="price-top price-top-me-app">
