@@ -3377,7 +3377,7 @@ section,
 }
 @media (max-width: 768px) {
   .card-wide-mobile > * {
-    width: 75%;
+    width: 80%;
   }
 
   .price-top {
