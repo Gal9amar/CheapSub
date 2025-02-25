@@ -3431,7 +3431,7 @@ section,
   background-color: #ffffff;
   color: rgb(0, 0, 0) !important;
   font-weight: bold;
-  padding: 5px 10px;
+  padding: 5px 5px;
   border-radius: 10px;
   z-index: 10;
 }
