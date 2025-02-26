@@ -3321,7 +3321,7 @@ section,
         min-height: 300px; /* ניתן לשנות את הערך בהתאם לצורך */
   }
 }
-#me-appicon .bi-phone {
+#me-appicon .bi-telephone-outbound-fill {
   color: #000000;
 }
 .card-hover-me-app:hover {
