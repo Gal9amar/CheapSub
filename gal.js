@@ -1,4 +1,4 @@
-const correctPassword = "2025"; // סיסמה נכונה
+const correctPassword = "3030"; // סיסמה נכונה
 
 function promptPassword(contentId, url, event) {
   event.preventDefault(); // מניעת ניווט ברירת מחדל
