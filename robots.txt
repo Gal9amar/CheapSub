@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://cheap-sub.co.il/sitemap.xml
+Sitemap: https://cheapsubs.co.il/sitemap.xml
