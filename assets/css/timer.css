@@ -44,17 +44,28 @@ body {
 }
 
 .carousel-item img {
-    width: 60% ;
-    height: 450px; /* ניתן לשנות לפי הצורך */
-    object-fit: fill; /* חיתוך ושמירה על פרופורציות */
-    border-radius: 20px; /* ניתן להגדיל או להקטין את הערך לפי הצורך */
+    width: 70%;
+    height: 400px; /* ניתן להתאים */
+    object-fit: fill; /* שומר על פרופורציות */
+    border-radius: 20px; /* מעגל פינות */
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
 }
+
+/* אפקט zoom-in */
+.carousel-item {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.carousel-item.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* רספונסיביות למסכים קטנים */
 @media (max-width: 768px) {
     .carousel-item img {
-        height: 230px; /* גובה נמוך יותר במובייל */
-        border-radius: 15px; /* עיגול קטן יותר במסכים קטנים */
+        height: 200px; /* גובה קטן יותר בנייד */
+        border-radius: 15px; /* עיגול פינות קטן יותר */
     }
 }
-
-
-
