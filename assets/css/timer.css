@@ -43,6 +43,18 @@ body {
   /* position: relative; */
 }
 
+.carousel-item img {
+    width: 60% ;
+    height: 450px; /* ניתן לשנות לפי הצורך */
+    object-fit: fill; /* חיתוך ושמירה על פרופורציות */
+    border-radius: 20px; /* ניתן להגדיל או להקטין את הערך לפי הצורך */
+}
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 230px; /* גובה נמוך יותר במובייל */
+        border-radius: 15px; /* עיגול קטן יותר במסכים קטנים */
+    }
+}
 
 
 
