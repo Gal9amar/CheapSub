@@ -3437,7 +3437,7 @@ section,
 }
   .floating-discord-btn {
     position: fixed;
-    bottom: 40px;
+    bottom: 35px;
     left: 10px; /* לשינוי צד: left: 20px */
     background-color: transparent; /* רקע שקוף */
     border: none;
