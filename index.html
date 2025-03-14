@@ -60,16 +60,41 @@
           <li><a href="#youtube-premium" tabindex="0">YouTube</a></li>
           <li><a href="#soundcloud" tabindex="0">SoundCloud</a></li>
           <li><a href="#netflix" tabindex="0">Netflix</a></li>
-          <li><a href="#meapp" tabindex="0">Me App</a></li>
-          <hr>
-          <li>
+          <!-- <li><a href="#meapp" tabindex="0">Me App</a></li> -->
+          <!-- <li><a href="#canva" tabindex="0">Canva Pro</a></li> -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            אפליקציות נוספות
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#meapp" tabindex="0">Me App</a>
+            <a class="dropdown-item" href="#canva" tabindex="0">Canva Pro</a>
+          </div>
+        </li>
+        <hr>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              מדריכים
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item protected-link"
+                onclick="promptPassword('dynamic-content-1', 'google-guide.html', event)" href="#">מדריך
+                גוגל</a>
+              <a class="dropdown-item protected-link"
+                onclick="promptPassword('dynamic-content-2', 'netflix-guide.html', event)" href="#">מדריך
+                נטפליקס</a>
+            </div>
+          </li>
+          <!-- <li>
             <a class="protected-link" onclick="promptPassword('dynamic-content-1', 'google-guide.html', event)"
               href="#">מדריך גוגל</a>
           </li>
           <li>
             <a class="protected-link" onclick="promptPassword('dynamic-content-2', 'netflix-guide.html', event)"
               href="#">מדריך נטפליקס</a>
-          </li>
+          </li> -->
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list" role="button" tabindex="0" aria-label="תפריט ניווט"></i>
       </nav>
@@ -412,7 +437,7 @@
           <!-- Section Title -->
           <div class="container section-title" data-aos="fade-up">
             <h3>מסלולי גיבוי מוזלים בתשלום שנתי</h3>
-            <h5><b style="background-color: rgb(249, 253, 0);">לאחר עדכון מחירים של פברואר 2025</b></h5>
+            <!-- <h5><b style="background-color: rgb(249, 253, 0);">לאחר עדכון מחירים של פברואר 2025</b></h5> -->
           </div><!-- End Section Title -->
           <div class="tab-content wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
             <div role="tabpanel" class="tab-pane fade show active" id="monthly">
@@ -427,7 +452,7 @@
                       <h2 class="mb-0"><sup>₪</sup>50 <span class="month">שנה שניה תשלום חד פעמי</span></h2>
                       <!-- <span class="text-capitalize">שנה ראשונה תשלום חד פעמי של ₪30</span><br> -->
                       <!-- <span class="text-capitalize">שנה שניה תשלום חד פעמי של ₪50</span> -->
-                      <br>
+                      <!-- <br> -->
                       <span>במקום</span>
                       <span>₪80 לשנה</span>
                     </div>
@@ -459,7 +484,7 @@
                       <h2 class="mb-0"><sup>₪</sup>200 <span class="month">שנה שניה תשלום חד פעמי</span></h2>
                       <!-- <span class="text-capitalize">שנה ראשונה תשלום חד פעמי של ₪125</span><br> -->
                       <!-- <span class="text-capitalize">שנה שניה תשלום חד פעמי של ₪200</span> -->
-                      <br>
+                      <!-- <br> -->
                       <span>במקום</span>
                       <span>₪390 לשנה</span>
                     </div>
@@ -804,13 +829,13 @@
                   <br>
                   <div class="price-item text-center card-hover-canva">
                     <div class="price-top price-top-canva">
-                      <span class="coming-soon-tag">65% הנחה</span>
+                      <span class="coming-soon-tag">72% הנחה</span>
                       <h2>Canva Pro</h2>
                       <!-- <h6>מנוי למשך 12 חודשים</h6> -->
-                      <h2 class="mb-0"><sup>₪</sup>150 <span class="month">לשנה</span></h2>
+                      <h2 class="mb-0"><sup>₪</sup>120 <span class="month">לשנה</span></h2>
                       <!-- <span class="text-capitalize">תשלום חד פעמי של ₪150</span><br> -->
                       <span>במקום</span>
-                      <span>$120 (כ-₪430)</span>
+                      <span>$120 <br> (כ-₪430)</span>
                     </div>
                     <div class="price-content marg">
                       <ul id="canvaicon" class="feature-list canva-card-hight border-bottom mb-30 mt-md-4 pb-3">
@@ -831,11 +856,11 @@
                         <li class="ps liright"><i class="bi bi-palette"></i><span>ועוד...</span></li>
                       </ul>
                       <!--<small>עלות הקמה חד"פ ₪50</small><br>-->
-                      <a href="javascript:void(0);" onclick="sendWhatsAppMessageBuy('מנוי Canva', '₪150 לשנה')"
+                      <a href="javascript:void(0);" onclick="sendWhatsAppMessageBuy('מנוי Canva', '₪120 לשנה')"
                         target="_blank"><button class="btn btn-canva ">
                           הזמן
-                        </button></a> 
-  
+                        </button></a>
+
                     </div>
                   </div>
                 </div>
@@ -844,6 +869,11 @@
           </div>
         </div>
       </div>
+      <!-- כפתור צף לדיסקורד -->
+      <a href="https://discord.gg/rAR3vKYt74" target="_blank" class="floating-discord-btn"
+        aria-label="Discord">
+        <img src="/assets/img/discord.png" alt="Discord">
+      </a>
     </section><!-- /other Section end -->
     <!-- Faq Section -->
     <section class="faq-9 faq section light-background" id="faq">
