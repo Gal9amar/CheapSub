@@ -3435,10 +3435,10 @@ section,
   border-radius: 10px;
   z-index: 10;
 }
-  .floating-discord-btn {
+  .floating-whatsapp-btn {
     position: fixed;
-    bottom: 35px;
-    left: 10px; /* לשינוי צד: left: 20px */
+    bottom: 40px;
+    left: 15px; /* לשינוי צד: השתמש ב-right במקום left */
     background-color: transparent; /* רקע שקוף */
     border: none;
     border-radius: 50%;
@@ -3451,12 +3451,12 @@ section,
     z-index: 1000;
   }
 
-  .floating-discord-btn img {
-    width: 50px;
-    height: 50px;
+  .floating-whatsapp-btn i {
+    font-size: 50px; /* גודל האייקון */
+    color: #25D366; /* צבע ירוק של וואטסאפ */
   }
 
-  .floating-discord-btn:hover {
+  .floating-whatsapp-btn:hover {
     transform: scale(1.1);
-    box-shadow: 0 6px 12px rgb(95,112,190);
+    box-shadow: 0 6px 12px rgba(95, 112, 190, 0);
   }
