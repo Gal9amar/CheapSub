@@ -1,4 +1,4 @@
-const correctPassword = "3030"; // סיסמה נכונה
+const correctPassword = "100200"; // סיסמה נכונה
 
 function promptPassword(contentId, url, event) {
   event.preventDefault(); // מניעת ניווט ברירת מחדל
@@ -72,7 +72,9 @@ function loadContent(contentId, url) {
 function sendWhatsAppMessageGuide() {
   const phoneNumber = "+972529070000";
   const message = "שלום , זו פניה מהאתר בנושא:";
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+    message
+  )}`;
   window.open(whatsappUrl, "_blank");
 }
 
@@ -109,7 +111,9 @@ document.head.appendChild(style);
 function sendWhatsAppMessageGuide() {
   const phoneNumber = "+972529070000"; // מספר הטלפון שלך
   const message = "שלום, אני צריך סיסמה למדריך באתר.";
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+    message
+  )}`;
   window.open(whatsappUrl, "_blank"); // פותח את וואטסאפ בחלון חדש
 }
 
@@ -120,7 +124,9 @@ function sendWhatsAppMessageBuy(productName, productPrice, productDescription) {
   שם המוצר: ${productName}
   מחיר: ${productPrice}
   `;
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+    message
+  )}`;
   window.open(whatsappUrl, "_blank");
   closePasswordPopup();
 }
